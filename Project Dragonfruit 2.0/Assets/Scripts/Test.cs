@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Test : MonoBehaviour
 {
     //[Header("Player Speed")]
     //public Vector3 jump, movement;
