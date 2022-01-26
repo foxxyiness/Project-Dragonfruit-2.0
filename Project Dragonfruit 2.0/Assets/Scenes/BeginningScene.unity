@@ -3316,11 +3316,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce44592b625e174f83ef1f25eb143c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 200
   movement: 0
   powerJump: 200
+  sprintSpeed: 200
   faceRight: 0
   isGrounded: 0
+  isSprinting: 0
 --- !u!50 &6037497294149967441
 Rigidbody2D:
   serializedVersion: 4
