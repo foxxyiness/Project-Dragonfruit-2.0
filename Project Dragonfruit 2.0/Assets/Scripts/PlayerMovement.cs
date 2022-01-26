@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Speed and Stuff")]
-    public float speed;
+    public float speed = 200f;
     public float movement;
     public int powerJump = 200;
+    public float sprintSpeed;
     [Header("Other Bools")]
     public bool faceRight;
     public bool isGrounded;
+    public bool isSprinting;
 
     public void PlayerMove()
     {
@@ -19,6 +21,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             Jump();
+        }
+
+        if (Input.GetButton("Sprint") && (isSprinting == false && isGrounded == true))
+        {
+            Sprint();
+        }
+        else
+        {
+            speed = 200f;
+            isSprinting = false;
         }
 
         if (movement < 0.0f && faceRight == false)
@@ -30,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             FlipPlayer();
         }
 
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(movement * speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(movement * speed * Time.deltaTime, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 
     }
 
@@ -40,11 +52,21 @@ public class PlayerMovement : MonoBehaviour
         PlayerMove();
     }
 
+    //Sprint Function
+    public void Sprint()
+    {
+        speed += sprintSpeed;
+        isSprinting = true;
+    }
+
+    //Jump Function
     public void Jump()
     {
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * powerJump);
         isGrounded = false;
     }
+
+    //Currenting allowing player to flip side until animations
     public void FlipPlayer()
     {
         faceRight = !faceRight;
@@ -53,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    //Collider for player to detect ground
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
