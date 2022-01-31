@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 CrouchingSize;
    
     [Header("Player Speed and Stuff")]
-    public float speed = 200f;
+    public float speed = 300f;
     public float movement;
     public int powerJump = 200;
     public float sprintSpeed;
