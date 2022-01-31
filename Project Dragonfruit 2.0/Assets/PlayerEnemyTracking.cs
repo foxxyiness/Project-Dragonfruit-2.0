@@ -8,6 +8,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public GameObject body;
     public Vector3 CurrPos;
     public float speed = 1f;
+    public bool faceRight = false;
 
     
     // Start is called before the first frame update
@@ -20,8 +21,25 @@ public class PlayerEnemyTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CurrPos = player.transform.position;
+        CurrPos.z = 0;
         float steptoward = speed * Time.deltaTime;
-        body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, player.transform.position, steptoward);
+        if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
+        {
+            faceRight = !faceRight;
+            Vector2 localScale = gameObject.transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
+        }
+        else if ((body.transform.localPosition.x - CurrPos.x) > 0 && !faceRight)
+        {
+            faceRight = !faceRight;
+            Vector2 localScale = gameObject.transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
+        }
+
+        body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
 
     }
 }
