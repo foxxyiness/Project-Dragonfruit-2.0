@@ -100,13 +100,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce44592b625e174f83ef1f25eb143c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  latern: {fileID: 5030576139660489354}
+  laternSprite: {fileID: 21300000, guid: 08016b5ba43ca3f46a033811adfe4026, type: 3}
+  SpriteRenderer: {fileID: 0}
+  standing: {fileID: 21300000, guid: 6d45a227ce37b0f4ba20c0ae1e5728cd, type: 3}
+  crouching: {fileID: 21300000, guid: 2db1abe5d88578b4b86e84929ca5db31, type: 3}
+  Collider: {fileID: 1592389248793940118}
+  StandingSize: {x: 0, y: 0}
+  CrouchingSize: {x: 0, y: 0}
   speed: 200
   movement: 0
   powerJump: 200
-  sprintSpeed: 200
+  sprintSpeed: 20
   faceRight: 0
+  isCrouching: 0
   isGrounded: 0
   isSprinting: 0
+  toggleLight: 0
 --- !u!50 &1592389248793940117
 Rigidbody2D:
   serializedVersion: 4
