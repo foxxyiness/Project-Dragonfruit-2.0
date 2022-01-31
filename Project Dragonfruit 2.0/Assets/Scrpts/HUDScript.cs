@@ -6,7 +6,7 @@ using TMPro;
 public class HUDScript : MonoBehaviour
 {
     public float stressLVL = 0;
-    public float addAmount;
+    public float addAmount1;
     public static HUDScript Instance;
     public TextMeshProUGUI Display1;
 
