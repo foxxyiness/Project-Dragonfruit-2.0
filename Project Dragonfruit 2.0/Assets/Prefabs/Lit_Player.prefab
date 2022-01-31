@@ -106,12 +106,12 @@ MonoBehaviour:
   standing: {fileID: 21300000, guid: 6d45a227ce37b0f4ba20c0ae1e5728cd, type: 3}
   crouching: {fileID: 21300000, guid: 2db1abe5d88578b4b86e84929ca5db31, type: 3}
   Collider: {fileID: 1592389248793940118}
-  StandingSize: {x: 0, y: 0}
-  CrouchingSize: {x: 0, y: 0}
+  StandingSize: {x: 2.06, y: 3.11}
+  CrouchingSize: {x: 2.06, y: 2}
   speed: 200
   movement: 0
   powerJump: 200
-  sprintSpeed: 20
+  sprintSpeed: 50
   faceRight: 0
   isCrouching: 0
   isGrounded: 0
