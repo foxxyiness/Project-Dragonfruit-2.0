@@ -5,8 +5,9 @@ using UnityEngine;
 public class StealthScript : MonoBehaviour
 {
     public bool isHidden = false;
-    public float resetval = 10;
+    public float resetval = 1.5f;
     public float timer;
+    public float visibility;
     public static StealthScript Instance;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden == false)
+        if(isHidden == false && resetval != 0f)
         {
             if (timer > 0)
             {
