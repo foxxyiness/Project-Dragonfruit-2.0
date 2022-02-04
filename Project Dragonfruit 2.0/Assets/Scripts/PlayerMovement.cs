@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Pastry Throw Stuff")]
+    public ThrowPastey Pastry;
+
+    
     [Header("Light Stuff")]
     public GameObject latern;
     public Sprite laternSprite;
+
     [Header("Crouch Stuff")]
     public SpriteRenderer SpriteRenderer;
     public Sprite standing;
@@ -23,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
 
     [Header("Impotant Bools")]
-    public bool faceRight;
+    static public bool faceRight;
     public bool isCrouching;
     public bool isGrounded;
     public bool isSprinting;
@@ -126,11 +131,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Light") && (toggleLight == false && isCrouching == false))
         {
             LightOn();
+            Debug.Log("Latern On");
         }
         else if (Input.GetButtonDown("Light") && (toggleLight == true && isCrouching == false))
         {
             LightOff();
             SpriteRenderer.sprite = standing;
+            Debug.Log("Latern Off");
         }
 
         if (toggleLight == true)
@@ -138,6 +145,10 @@ public class PlayerMovement : MonoBehaviour
             SpriteRenderer.sprite = laternSprite;
         }
         /****************************************************************************************************************************************************************/
+
+        /****************************************************************************************************************************************************************/
+        //Throwing Pastry
+     //   if(Input.GetButtonDown)
     }
 
     //Collider for player to detect ground
