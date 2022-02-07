@@ -6327,6 +6327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce44592b625e174f83ef1f25eb143c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pastry: {fileID: 0}
   latern: {fileID: 5030576141089252639}
   laternSprite: {fileID: 21300000, guid: 08016b5ba43ca3f46a033811adfe4026, type: 3}
   SpriteRenderer: {fileID: 0}
@@ -6339,7 +6340,6 @@ MonoBehaviour:
   movement: 0
   powerJump: 350
   sprintSpeed: 500
-  faceRight: 0
   isCrouching: 0
   isGrounded: 0
   isSprinting: 0
@@ -6557,4 +6557,4 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
