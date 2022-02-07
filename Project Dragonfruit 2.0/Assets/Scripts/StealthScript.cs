@@ -7,7 +7,6 @@ public class StealthScript : MonoBehaviour
     public bool isHidden = false;
     public float resetval = 1.5f;
     public float timer;
-    public float visibility;
     public static StealthScript Instance;
     // Start is called before the first frame update
     void Start()

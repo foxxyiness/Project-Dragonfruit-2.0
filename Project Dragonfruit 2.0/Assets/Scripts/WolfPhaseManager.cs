@@ -21,7 +21,7 @@ public class WolfPhaseManager : MonoBehaviour
         if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL <= 25f)
         {
             //Phase1WolfEntity.SetActive(true);
-            StealthScript.Instance.resetval = 2f;
+            StealthScript.Instance.resetval = 0f;
 
         }
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f)
