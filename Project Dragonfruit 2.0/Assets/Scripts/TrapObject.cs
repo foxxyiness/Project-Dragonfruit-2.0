@@ -7,7 +7,8 @@ public class TrapObject : MonoBehaviour
     public float pointsadded;
     private float timer = 0;
     public float timedestroy = 2;
-    public bool activated = false;
+    public bool isdestructible;
+    private bool activated = false;
     public GameObject parent;
     // Start is called before the first frame update
     void Start()
@@ -18,24 +19,29 @@ public class TrapObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activated == true)
+        if (isdestructible == true)
         {
-            timer += Time.deltaTime;
-        }
-        if (timer >= timedestroy)
-        {
-            Destroy(parent);
+            if (activated == true)
+            {
+                timer += Time.deltaTime;
+            }
+            if (timer >= timedestroy)
+            {
+                Destroy(parent);
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player" && activated == false)
         {
-            if (activated == false)
-            {
-                HUDScript.Instance.stressLVL += pointsadded;
-            }
+            HUDScript.Instance.stressLVL += pointsadded;
             activated = true;
+            Debug.Log("Trap Activated");
+        }
+        if (coll.gameObject.tag == "Player" && isdestructible == false)
+        {
+            HUDScript.Instance.stressLVL += pointsadded;
             Debug.Log("Trap Activated");
         }
 
