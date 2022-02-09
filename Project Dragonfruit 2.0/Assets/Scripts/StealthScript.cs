@@ -18,9 +18,9 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden == false && resetval <= 1f)
+        if(isHidden == false || resetval <= 1)
         {
-            if (timer > 0)
+            if (timer >= 0)
             {
                 timer -= Time.deltaTime;
                 
@@ -28,10 +28,12 @@ public class StealthScript : MonoBehaviour
             else
             {
                 HUDScript.Instance.stressLVL += HUDScript.Instance.addAmount1;
+
                 timer = resetval;
             }
 
         }
+
         else
         {
             timer = resetval;

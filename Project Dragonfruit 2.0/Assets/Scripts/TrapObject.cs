@@ -6,6 +6,7 @@ public class TrapObject : MonoBehaviour
 {
     public float pointsadded;
     private float timer = 0;
+    private float buffertimer = 0;
     public float timedestroy = 2;
     public bool isdestructible;
     private bool activated = false;
@@ -30,13 +31,24 @@ public class TrapObject : MonoBehaviour
                 Destroy(parent);
             }
         }
+        if (isdestructible == false && activated == true)
+        {
+            activated = false;
+            while (buffertimer <= 2)
+            { 
+                buffertimer += Time.deltaTime;
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player" && activated == false)
+        if (coll.gameObject.tag == "Player" && isdestructible == true)
         {
             HUDScript.Instance.stressLVL += pointsadded;
-            activated = true;
+            if (activated == false)
+            { 
+                activated = true;
+            }
             Debug.Log("Trap Activated");
         }
         if (coll.gameObject.tag == "Player" && isdestructible == false)
