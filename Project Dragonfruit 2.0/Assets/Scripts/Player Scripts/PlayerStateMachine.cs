@@ -33,6 +33,8 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isGrounded;
     public bool isSprinting;
     public bool toggleLight;
+
+    PlayerBaseState _currentState;
     void Start()
     {
         
