@@ -11,6 +11,9 @@ public class TrapObject : MonoBehaviour
     public bool isdestructible;
     private bool activated = false;
     public GameObject parent;
+    private bool soundplay;
+    public SpriteRenderer spriteRenderer;
+    public Sprite destroysprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,15 +47,18 @@ public class TrapObject : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player" && isdestructible == true)
         {
+            spriteRenderer.sprite = destroysprite;
             HUDScript.Instance.stressLVL += pointsadded;
             if (activated == false)
             { 
                 activated = true;
             }
+            soundplay = true;
             Debug.Log("Trap Activated");
         }
         if (coll.gameObject.tag == "Player" && isdestructible == false)
         {
+            soundplay = true;
             HUDScript.Instance.stressLVL += pointsadded;
             Debug.Log("Trap Activated");
         }
