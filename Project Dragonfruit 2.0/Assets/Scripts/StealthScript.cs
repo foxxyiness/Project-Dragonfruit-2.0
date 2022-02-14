@@ -18,7 +18,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden == false || resetval <= 1)
+        if(isHidden == false && resetval <= 1)
         {
             if (timer >= 0)
             {
