@@ -7,6 +7,7 @@ public class WolfPhaseManager : MonoBehaviour
     public GameObject Phase2WolfEntity;
     public GameObject Phase4WolfEntity;
     public GameObject Phase3WolfEntity;
+    public Animator anim;
     bool b1 = false;
     bool b2 = false;
     bool b3 = false;
@@ -35,13 +36,11 @@ public class WolfPhaseManager : MonoBehaviour
             b2 = true;
             Phase2WolfEntity.SetActive(!b2);
             Phase3WolfEntity.SetActive(b2);
+            anim.Play("Entry");
             StealthScript.Instance.resetval = 1f;
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
-            b3 = true;
-            Phase3WolfEntity.SetActive(b3);
-            
             StealthScript.Instance.resetval = 0.5f;
         }
 
