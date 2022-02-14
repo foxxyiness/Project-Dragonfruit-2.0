@@ -7,7 +7,6 @@ public class WolfPhaseManager : MonoBehaviour
     public GameObject Phase2WolfEntity;
     public GameObject Phase4WolfEntity;
     public GameObject Phase3WolfEntity;
-    public GameObject Phase4WolfSpawn;
     bool b1 = false;
     bool b2 = false;
     bool b3 = false;
@@ -42,7 +41,7 @@ public class WolfPhaseManager : MonoBehaviour
         {
             b3 = true;
             Phase3WolfEntity.SetActive(b3);
-            Instantiate(Phase4WolfEntity, Phase4WolfSpawn.transform.position, Quaternion.identity);
+            
             StealthScript.Instance.resetval = 0.5f;
         }
 
