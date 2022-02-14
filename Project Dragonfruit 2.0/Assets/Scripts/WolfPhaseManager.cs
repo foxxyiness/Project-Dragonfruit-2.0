@@ -41,6 +41,7 @@ public class WolfPhaseManager : MonoBehaviour
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
+            anim.SetFloat("SpeedMult", 2);
             StealthScript.Instance.resetval = 0.5f;
         }
 
