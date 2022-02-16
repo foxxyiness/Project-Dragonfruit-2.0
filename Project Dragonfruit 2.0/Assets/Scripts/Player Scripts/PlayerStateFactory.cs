@@ -8,36 +8,40 @@ public class PlayerStateFactory
 
     public PlayerBaseState Idle()
     {
-        return new PlayerIdleState();
+        return new PlayerIdleState(_context, this);
     }
     public PlayerBaseState OffState()
     {
-        return new PlayerOffState();
+        return new PlayerOffState(_context, this);
     }
     public PlayerBaseState LaternState()
     {
-        return new PlayerLaternState();
+        return new PlayerLaternState(_context, this);
     }
 
     public PlayerBaseState SprintState()
     {
-        return new PlayerSprintState();
+        return new PlayerSprintState(_context, this);
     }
     public PlayerBaseState LaternSprintState()
     {
-        return new PlayerLaternSprintState();
+        return new PlayerLaternSprintState(_context, this);
     }
     public PlayerBaseState JumpState()
     {
-        return new PlayerJumpState();
+        return new PlayerJumpState(_context, this);
     }
     public PlayerBaseState LanternJumpState()
     {
-        return new PlayerLaternJumpState();
+        return new PlayerLaternJumpState(_context, this);
     }
     public PlayerBaseState CrouchState()
     {
-        return new PlayerCrouchingState();
+        return new PlayerCrouchingState(_context, this);
+    }
+    public PlayerBaseState GroundState()
+    {
+        return new PlayerGroundState(_context, this);
     }
 
 

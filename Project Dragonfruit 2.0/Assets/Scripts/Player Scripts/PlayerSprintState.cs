@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerSprintState : PlayerBaseState
 {
+    public PlayerSprintState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
+        : base(currentContext, playerStateFactory) { }
     public override void EnterState() { }
     public override void UpdateState() { }
     public override void ExitState() { }
