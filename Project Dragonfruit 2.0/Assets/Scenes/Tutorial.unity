@@ -6884,35 +6884,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1592389249148733185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592389249148733212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce44592b625e174f83ef1f25eb143c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pastry: {fileID: 0}
-  latern: {fileID: 5030576141089252639}
-  laternSprite: {fileID: 21300000, guid: 08016b5ba43ca3f46a033811adfe4026, type: 3}
-  SpriteRenderer: {fileID: 0}
-  standing: {fileID: 21300000, guid: 6d45a227ce37b0f4ba20c0ae1e5728cd, type: 3}
-  crouching: {fileID: 21300000, guid: 2db1abe5d88578b4b86e84929ca5db31, type: 3}
-  Collider: {fileID: 1592389249148733187}
-  StandingSize: {x: 2.06, y: 3.11}
-  CrouchingSize: {x: 2.06, y: 2}
-  speed: 300
-  movement: 0
-  powerJump: 350
-  sprintSpeed: 500
-  isCrouching: 0
-  isGrounded: 0
-  isSprinting: 0
-  toggleLight: 0
 --- !u!70 &1592389249148733187
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6938,8 +6909,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592389249148733214}
+  - component: {fileID: 1592389249148733219}
   - component: {fileID: 1592389249148733215}
-  - component: {fileID: 1592389249148733185}
   - component: {fileID: 1592389249148733184}
   - component: {fileID: 1592389249148733187}
   - component: {fileID: 1592389249148733216}
@@ -7173,6 +7144,38 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!114 &1592389249148733219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592389249148733212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pastry: {fileID: 0}
+  latern: {fileID: 0}
+  laternSprite: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
+  standing: {fileID: 0}
+  crouching: {fileID: 0}
+  Collider: {fileID: 0}
+  StandingSize: {x: 0, y: 0}
+  CrouchingSize: {x: 0, y: 0}
+  rb: {fileID: 0}
+  speed: 300
+  movement: 0
+  powerJump: 200
+  sprintSpeed: 0
+  move: {x: 0, y: 0}
+  isCrouching: 0
+  isGrounded: 0
+  isJumpPressed: 0
+  isSprinting: 0
+  toggleLight: 0
 --- !u!114 &5030576141089252609
 MonoBehaviour:
   m_ObjectHideFlags: 0
