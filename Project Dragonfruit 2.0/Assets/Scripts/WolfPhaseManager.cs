@@ -5,7 +5,7 @@ using UnityEngine;
 public class WolfPhaseManager : MonoBehaviour
 {
     public GameObject Phase2WolfEntity;
-    public GameObject Phase4WolfEntity;
+    public GameObject Phase4WolfHitbox;
     public GameObject Phase3WolfEntity;
     public Animator anim;
     bool b1 = false;
@@ -41,9 +41,20 @@ public class WolfPhaseManager : MonoBehaviour
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
+            b3 = true;
+            Debug.Log("Speed up!");
             anim.SetFloat("SpeedMult", 2);
+            Phase3WolfEntity.SetActive(b3);
+            Phase4WolfHitbox.SetActive(b3);
             StealthScript.Instance.resetval = 0.5f;
+            if (WolfMouth1.Instance.caughtplr == true)
+            {
+                Debug.Log("Caught!");
+                anim.SetTrigger("Caught");
+                anim.SetTrigger("Caught");
+            }
         }
+        
 
     }
 }

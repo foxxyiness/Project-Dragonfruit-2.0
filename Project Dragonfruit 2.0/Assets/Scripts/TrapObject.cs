@@ -43,6 +43,13 @@ public class TrapObject : MonoBehaviour
             }
         }
     }
+    void OnTriggerStay2d(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Player" && isdestructible == false)
+        {
+
+        }
+    }
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player" && isdestructible == true)
@@ -54,13 +61,11 @@ public class TrapObject : MonoBehaviour
                 activated = true;
             }
             soundplay = true;
-            Debug.Log("Trap Activated");
         }
         if (coll.gameObject.tag == "Player" && isdestructible == false)
         {
             soundplay = true;
             HUDScript.Instance.stressLVL += pointsadded;
-            Debug.Log("Trap Activated");
         }
 
     }
