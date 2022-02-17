@@ -57,7 +57,7 @@ public class PlayerStateMachine : MonoBehaviour
     void Start()
     {
      
-       // transform.position = new Vector3(2.0f, 0.0f, 0.0f);
+       
     }
     private void FixedUpdate()
     {
@@ -69,7 +69,7 @@ public class PlayerStateMachine : MonoBehaviour
     void Update()
     {
         IsJumpPressed();
-       // Jump();
+        IsSprintPressed();
         _currentState.UpdateState();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     
@@ -82,18 +82,11 @@ public class PlayerStateMachine : MonoBehaviour
             isGrounded = true;
         }
     }
-   /* void Jump()
-    {
-        if (isJumpPressed)
-        {
-            rb.AddForce(Vector2.up * powerJump, ForceMode2D.Impulse);
-            isGrounded = false;
-        }
-    } */
+   
 
     void IsJumpPressed()
     {
-        if (Input.GetButtonDown("Jump") && groundCheck)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumpPressed = true;
         }
@@ -102,7 +95,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint") && isGrounded)
         {
             isSprinting = true;
         }
