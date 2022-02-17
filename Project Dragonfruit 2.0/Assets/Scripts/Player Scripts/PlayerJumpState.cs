@@ -27,7 +27,6 @@ public class PlayerJumpState : PlayerBaseState
 
     void Jump()
     {
-       
             _ctx.rb.AddForce(Vector2.up * _ctx.powerJump, ForceMode2D.Impulse);
             _ctx.isGrounded = false;
     }
