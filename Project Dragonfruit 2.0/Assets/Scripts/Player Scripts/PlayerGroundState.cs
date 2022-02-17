@@ -23,7 +23,7 @@ public class PlayerGroundState : PlayerBaseState
             SwitchState(_factory.SprintState());
         }
 
-        if(_ctx.isJumpPressed == true)
+        if(_ctx.isJumpPressed)
         {
             SwitchState(_factory.JumpState());
         }

@@ -20,18 +20,16 @@ public class PlayerJumpState : PlayerBaseState
         if(_ctx.isGrounded)
         {
             SwitchState(_factory.GroundState());
-            _ctx.isJumpPressed = false;
+            //_ctx.isJumpPressed = false;
         }
     }
     public override void InitializeSubStates() { }
 
     void Jump()
     {
-        if (_ctx.groundCheck == true)
-        {
-            _ctx.rb.AddForce(Vector2.up * _ctx.rb.velocity.y * _ctx.powerJump, ForceMode2D.Impulse);
+       
+            _ctx.rb.AddForce(Vector2.up * _ctx.powerJump, ForceMode2D.Impulse);
             _ctx.isGrounded = false;
-        }
     }
 
 

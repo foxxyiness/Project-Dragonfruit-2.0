@@ -17,7 +17,7 @@ public class PlayerStateMachine : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite standing;
     public Sprite crouching;
-    public CapsuleCollider2D Collider;
+    public PolygonCollider2D Collider;
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
 
@@ -25,7 +25,7 @@ public class PlayerStateMachine : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 300f;
     public float movement;
-    public int powerJump = 200;
+    public float powerJump = 200;
     public float sprintSpeed;
     public Vector2 move;
 
@@ -52,6 +52,7 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.EnterState();
 
         rb = GetComponent<Rigidbody2D>();
+        
     }
     void Start()
     {
@@ -67,32 +68,48 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Jump();
+        IsJumpPressed();
+       // Jump();
         _currentState.UpdateState();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (Input.GetButtonDown("Jump"))
-        {
-            isJumpPressed = true;
-        }
-        if (Input.GetButton("Sprint"))
-        {
-            isSprinting = true;
-        }
+    
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
     }
-    void Jump()
+   /* void Jump()
     {
-        if (groundCheck == true)
+        if (isJumpPressed)
         {
-            rb.AddForce(Vector2.up * rb.velocity.y * powerJump, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * powerJump, ForceMode2D.Impulse);
             isGrounded = false;
         }
+    } */
+
+    void IsJumpPressed()
+    {
+        if (Input.GetButtonDown("Jump") && groundCheck)
+        {
+            isJumpPressed = true;
+        }
+        else { isJumpPressed = false; }
     }
+    void IsSprintPressed()
+    {
+
+        if (Input.GetButton("Sprint"))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+    }
+
 }
