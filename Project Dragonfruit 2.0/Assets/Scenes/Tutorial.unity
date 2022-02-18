@@ -7135,13 +7135,14 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 300
   movement: 0
-  powerJump: 7
+  powerJump: 3.5
   sprintSpeed: 0
   move: {x: 0, y: 0}
   isCrouching: 0
   isGrounded: 0
   isJumpPressed: 0
   isSprinting: 0
+  isMovementPressed: 0
   toggleLight: 0
 --- !u!114 &5030576141089252609
 MonoBehaviour:
