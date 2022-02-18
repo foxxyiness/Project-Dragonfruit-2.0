@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerGroundState : PlayerBaseState
 {
     public PlayerGroundState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
-       : base(currentContext, playerStateFactory) { }
+       : base(currentContext, playerStateFactory)
+    {
+        _isRootState = true;
+        InitializeSubStates();    
+    }
     public override void EnterState() 
     {
            
@@ -28,6 +32,22 @@ public class PlayerGroundState : PlayerBaseState
             SwitchState(_factory.JumpState());
         }
     }
-    public override void InitializeSubStates() { }
+    public override void InitializeSubStates()
+    {
+        if(!_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        {
+            SetSubState(_factory.Idle());
+        }
+        else if (_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        {
+            SetSubState(_factory.OffState());
+        }
+        else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
+        {
+            SetSubState(_factory.SprintState());
+        }
+
+
+    }
 }
 

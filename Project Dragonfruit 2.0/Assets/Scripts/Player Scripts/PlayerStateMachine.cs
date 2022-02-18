@@ -35,6 +35,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isGrounded;
     public bool isJumpPressed = false;
     public bool isSprinting = false;
+    public bool isMovementPressed = false;
     public bool toggleLight;
 
     PlayerBaseState _currentState;
@@ -70,7 +71,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         IsJumpPressed();
         IsSprintPressed();
-        _currentState.UpdateState();
+        _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     
     }
@@ -103,6 +104,14 @@ public class PlayerStateMachine : MonoBehaviour
         {
             isSprinting = false;
         }
+    }
+    void IsMomementPressed()
+    {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            isMovementPressed = true;
+        }
+
     }
 
 }

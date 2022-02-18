@@ -7,15 +7,21 @@ public class PlayerIdleState : PlayerBaseState
     public PlayerIdleState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base(currentContext, playerStateFactory) { }
     public override void EnterState() { }
-    public override void UpdateState() { }
+    public override void UpdateState() 
+    {
+        CheckSwitchStates();
+    }
     public override void ExitState() { }
     public override void CheckSwitchStates() 
     {
-        //When sprint is pressed, latern is off, envokes sprint state from factory
-        if(_ctx.isSprintPressed)
+        if (_ctx.isMovementPressed && _ctx.isSprintPressed)
         {
             SwitchState(_factory.SprintState());
+        } else if (_ctx.isMovementPressed)
+        {
+            SwitchState(_factory.OffState());
         }
+
     }
     public override void InitializeSubStates() { }
 }

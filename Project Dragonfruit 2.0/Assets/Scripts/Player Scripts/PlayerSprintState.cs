@@ -7,8 +7,20 @@ public class PlayerSprintState : PlayerBaseState
     public PlayerSprintState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base(currentContext, playerStateFactory) { }
     public override void EnterState() { }
-    public override void UpdateState() { }
+    public override void UpdateState() 
+    {
+        CheckSwitchStates();
+    }
     public override void ExitState() { }
-    public override void CheckSwitchStates() { }
+    public override void CheckSwitchStates() 
+    {
+        if(!_ctx.isMovementPressed)
+        {
+            SwitchState(_factory.Idle());
+        } else if(_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        {
+            SwitchState(_factory.OffState());
+        }
+    }
     public override void InitializeSubStates() { }
 }
