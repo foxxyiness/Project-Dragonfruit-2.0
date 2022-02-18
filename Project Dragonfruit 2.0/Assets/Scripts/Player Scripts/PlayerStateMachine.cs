@@ -71,6 +71,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         IsJumpPressed();
         IsSprintPressed();
+        IsMovementPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     
@@ -90,6 +91,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumpPressed = true;
+            Debug.Log("Jump Pressed");
         }
         else { isJumpPressed = false; }
     }
@@ -105,12 +107,15 @@ public class PlayerStateMachine : MonoBehaviour
             isSprinting = false;
         }
     }
-    void IsMomementPressed()
+    void IsMovementPressed()
     {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMovementPressed = true;
+            Debug.Log("Movement Pressed");
         }
+        else
+            isMovementPressed = false;
 
     }
 

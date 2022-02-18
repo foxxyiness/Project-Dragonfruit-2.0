@@ -21,6 +21,10 @@ public class PlayerIdleState : PlayerBaseState
         {
             SwitchState(_factory.OffState());
         }
+        if(_ctx.isJumpPressed)
+        {
+            SwitchState(_factory.JumpState());
+        }
 
     }
     public override void InitializeSubStates() { }

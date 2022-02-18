@@ -14,13 +14,17 @@ public class PlayerSprintState : PlayerBaseState
     public override void ExitState() { }
     public override void CheckSwitchStates() 
     {
-        if(!_ctx.isMovementPressed)
+        if (!_ctx.isMovementPressed)
         {
             SwitchState(_factory.Idle());
-        } else if(_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        } else if (_ctx.isMovementPressed && !_ctx.isSprintPressed)
         {
             SwitchState(_factory.OffState());
+        } else if (_ctx.isJumpPressed && _ctx.isSprintPressed)
+        {
+            SwitchState(_factory.JumpState());
         }
+        UpdateStates();
     }
     public override void InitializeSubStates() { }
 }
