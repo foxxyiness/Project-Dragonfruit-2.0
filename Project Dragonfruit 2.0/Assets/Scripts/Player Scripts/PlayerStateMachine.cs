@@ -35,7 +35,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isGrounded;
     public bool isJumpPressed = false;
     public bool isSprinting = false;
-    public bool isMovementPressed = false;
+    public bool isMoving = false;
     public bool toggleLight;
 
     PlayerBaseState _currentState;
@@ -43,7 +43,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
-  
+    public bool isMovementPressed { get { return isMoving; } }
     public bool groundCheck{ get { return isGrounded; } }
     //Awake is called earlier than Start
     void Awake()
@@ -69,6 +69,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Current State " +_currentState);
         IsJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
@@ -98,7 +99,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetButton("Sprint") && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             isSprinting = true;
         }
@@ -111,11 +112,11 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
-            isMovementPressed = true;
+            isMoving = true;
             Debug.Log("Movement Pressed");
         }
         else
-            isMovementPressed = false;
+            isMoving = false;
 
     }
 

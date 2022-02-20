@@ -8,6 +8,7 @@ public class PlayerJumpState : PlayerBaseState
         : base(currentContext, playerStateFactory) 
     {
         _isRootState = true;
+        InitializeSubStates();
     }
     public override void EnterState() 
     {
@@ -26,7 +27,21 @@ public class PlayerJumpState : PlayerBaseState
             //_ctx.isJumpPressed = false;
         }
     }
-    public override void InitializeSubStates() { }
+    public override void InitializeSubStates() 
+    {
+        if (!_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        {
+            SetSubState(_factory.Idle());
+        }
+        else if (_ctx.isMovementPressed && !_ctx.isSprintPressed)
+        {
+            SetSubState(_factory.OffState());
+        }
+        else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
+        {
+            SetSubState(_factory.SprintState());
+        }
+    }
 
     void Jump()
     {

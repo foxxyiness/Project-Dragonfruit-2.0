@@ -10,7 +10,6 @@ public class PlayerOffState : PlayerBaseState
     public override void UpdateState() 
     {
         CheckSwitchStates();
-        ExitState();
     }
     public override void ExitState() 
     {
@@ -25,10 +24,7 @@ public class PlayerOffState : PlayerBaseState
         {
             SwitchState(_factory.SprintState());
         }
-        else if (_ctx.isJumpPressed && _ctx.isMovementPressed)
-        {
-            SwitchState(_factory.JumpState());
-        }
+   
 
 
 

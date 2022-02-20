@@ -22,11 +22,6 @@ public class PlayerGroundState : PlayerBaseState
     public override void CheckSwitchStates()
     {
         //When sprint is pressed, latern is off, envokes sprint state from factory
-        if (_ctx.isSprintPressed)
-        {
-            SwitchState(_factory.SprintState());
-        }
-
         if(_ctx.isJumpPressed)
         {
             SwitchState(_factory.JumpState());

@@ -26,10 +26,13 @@ public abstract class PlayerBaseState
     public void UpdateStates() 
     {
         UpdateState();
-        if(_currentSubState != null)
+      
+        if (_currentSubState != null)
         {
             _currentSubState.UpdateStates();
+            Debug.Log("Sub State " + _currentSubState);
         }
+        
     }
     protected void SwitchState(PlayerBaseState newState) 
     {
@@ -43,7 +46,7 @@ public abstract class PlayerBaseState
             _ctx.CurrentState = newState;
         } else if(_currentSuperState != null)
         {
-            _currentSuperState.SetSuperState(newState);
+            _currentSuperState.SetSubState(newState);
         }
     }
     protected void SetSuperState(PlayerBaseState newSuperState) 
