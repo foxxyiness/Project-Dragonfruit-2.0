@@ -6,7 +6,10 @@ public class PlayerSprintState : PlayerBaseState
 {
     public PlayerSprintState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base(currentContext, playerStateFactory) { }
-    public override void EnterState() { }
+    public override void EnterState() 
+    {
+        _ctx.sprintSpeed = 1.5f;
+    }
     public override void UpdateState() 
     {
         CheckSwitchStates();

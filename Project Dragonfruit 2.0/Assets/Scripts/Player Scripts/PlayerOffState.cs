@@ -6,7 +6,10 @@ public class PlayerOffState : PlayerBaseState
 {
     public PlayerOffState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base(currentContext, playerStateFactory) { }
-    public override void EnterState() { }
+    public override void EnterState() 
+    {
+        _ctx.sprintSpeed = 1.0f;
+    }
     public override void UpdateState() 
     {
         CheckSwitchStates();
@@ -24,9 +27,6 @@ public class PlayerOffState : PlayerBaseState
         {
             SwitchState(_factory.SprintState());
         }
-   
-
-
 
     }
     public override void InitializeSubStates() { }

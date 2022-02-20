@@ -25,8 +25,8 @@ public class PlayerStateMachine : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 300f;
     public float movement;
-    public float powerJump = 200;
-    public float sprintSpeed;
+    public float powerJump = 5.0f;
+    public float sprintSpeed = 1.0f;
     public Vector2 move;
 
     [Header("Impotant Bools")]
@@ -62,7 +62,7 @@ public class PlayerStateMachine : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(move.x * speed * sprintSpeed * Time.deltaTime, rb.velocity.y);
 
     }
 

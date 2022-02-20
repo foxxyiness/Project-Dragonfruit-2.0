@@ -6891,7 +6891,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592389249148733212}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 9675bfd5e5b5c5a42a2bfa1427615347, type: 2}
   m_IsTrigger: 0
@@ -7135,14 +7135,14 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 300
   movement: 0
-  powerJump: 3.5
-  sprintSpeed: 0
+  powerJump: 7
+  sprintSpeed: 1
   move: {x: 0, y: 0}
   isCrouching: 0
   isGrounded: 0
   isJumpPressed: 0
   isSprinting: 0
-  isMovementPressed: 0
+  isMoving: 0
   toggleLight: 0
 --- !u!114 &5030576141089252609
 MonoBehaviour:
