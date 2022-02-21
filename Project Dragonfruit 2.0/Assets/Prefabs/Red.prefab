@@ -47,23 +47,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4191405205786991683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a812589380932a4a90a8b868abad4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 4191405205786991739}
   Pastry: {fileID: 0}
-  latern: {fileID: 0}
-  laternSprite: {fileID: 0}
-  SpriteRenderer: {fileID: 0}
-  standing: {fileID: 0}
-  crouching: {fileID: 0}
-  Collider: {fileID: 0}
+  latern: {fileID: 7630121546466426432}
+  laternSprite: {fileID: 21300000, guid: 08016b5ba43ca3f46a033811adfe4026, type: 3}
+  SpriteRenderer: {fileID: 4191405205786991680}
+  standing: {fileID: 21300000, guid: 0aea2cf9383d62843bd8c7970e0255d0, type: 3}
+  crouching: {fileID: 21300000, guid: 2db1abe5d88578b4b86e84929ca5db31, type: 3}
+  Collider: {fileID: 4191405205786991743}
   StandingSize: {x: 0, y: 0}
   CrouchingSize: {x: 0, y: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 4191405205786991711}
   speed: 300
   movement: 0
-  powerJump: 7
+  powerJump: 5
   sprintSpeed: 1
   move: {x: 0, y: 0}
   isCrouching: 0
