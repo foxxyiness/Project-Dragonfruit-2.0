@@ -9,6 +9,8 @@ public class PlayerOffState : PlayerBaseState
     public override void EnterState() 
     {
         _ctx.sprintSpeed = 1.0f;
+        _ctx.Animator.SetBool("isIdle", false);
+        _ctx.Animator.SetBool("isWalking", true);
     }
     public override void UpdateState() 
     {

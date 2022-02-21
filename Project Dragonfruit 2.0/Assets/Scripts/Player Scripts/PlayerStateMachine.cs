@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
+    public Animator Animator;
     [Header("Pastry Throw Stuff")]
     public ThrowPastey Pastry;
 
