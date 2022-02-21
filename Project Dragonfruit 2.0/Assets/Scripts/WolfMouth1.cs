@@ -5,14 +5,13 @@ using UnityEngine;
 public class WolfMouth1 : MonoBehaviour
 {
     public string goodytagname;
-    public bool caughtplr = false;
-    public bool distracted = false;
+    public static bool caughtplr = false;
+    public static bool distracted = false;
     public GameObject DisTarget;
-    public static WolfMouth1 Instance;
+
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
     }
 
     // Update is called once per frame
@@ -30,6 +29,8 @@ public class WolfMouth1 : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             caughtplr = true;
+            Debug.Log("Player caught by hitbox");
+
         }
     }
 }
