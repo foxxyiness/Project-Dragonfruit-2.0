@@ -7,7 +7,7 @@ public class WolfMouth1 : MonoBehaviour
     public string goodytagname;
     public bool caughtplr = false;
     public bool kill = false;
-    public static bool distracted = false;
+    public bool distracted = false;
     public GameObject DisTarget;
     public static WolfMouth1 Instance;
 
@@ -29,7 +29,7 @@ public class WolfMouth1 : MonoBehaviour
             DisTarget = coll.gameObject;
             distracted = true;
         }
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player" && distracted == false)
         {
             caughtplr = true;
             Debug.Log("Player caught by hitbox");
