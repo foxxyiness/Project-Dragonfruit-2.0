@@ -6,6 +6,7 @@ public class WolfMouth1 : MonoBehaviour
 {
     public string goodytagname;
     public bool caughtplr = false;
+    public bool kill = false;
     public static bool distracted = false;
     public GameObject DisTarget;
     public static WolfMouth1 Instance;
