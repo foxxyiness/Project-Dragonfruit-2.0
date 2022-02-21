@@ -17,20 +17,16 @@ public class WolfMouth1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == goodytagname)
+
+        void OnTriggerEnter2D(Collider2D coll)
         {
-            DisTarget = coll.gameObject;
-            distracted = true;
-        }
-        if (coll.gameObject.tag == "Player")
-        {
-            caughtplr = true;
-            Debug.Log("Player caught by hitbox");
+            if(caughtplr == false)
+            {
+                caughtplr = true;
+            }
+
 
         }
     }
+
 }

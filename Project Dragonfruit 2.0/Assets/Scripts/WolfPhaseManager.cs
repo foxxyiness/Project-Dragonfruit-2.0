@@ -47,7 +47,7 @@ public class WolfPhaseManager : MonoBehaviour
             Phase3WolfEntity.SetActive(b3);
             Phase4WolfHitbox.SetActive(b3);
             StealthScript.Instance.resetval = 0.5f;
-            if (WolfMouth1.caughtplr == true)
+            if (PlayerMovement.Instance.isCaught == true)
             {
                 Debug.Log("Caught!");
                 anim.SetTrigger("Caught");

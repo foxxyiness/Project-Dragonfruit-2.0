@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Impotant Bools")]
     static public bool faceRight;
     public bool isCrouching;
+    public bool isCaught = false;
     public bool isGrounded;
     public bool isSprinting;
     public bool toggleLight;
