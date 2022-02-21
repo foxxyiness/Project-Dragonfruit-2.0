@@ -114,10 +114,14 @@ public class PlayerStateMachine : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMoving = true;
+            Animator.SetBool("isWalking", true);
             Debug.Log("Movement Pressed");
         }
         else
+        { 
             isMoving = false;
+            Animator.SetBool("isWalking", false);
+        }
 
     }
 
