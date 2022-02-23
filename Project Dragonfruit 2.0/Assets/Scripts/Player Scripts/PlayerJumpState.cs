@@ -23,6 +23,7 @@ public class PlayerJumpState : PlayerBaseState
     {
         if(_ctx.isGrounded)
         {
+            _ctx.Animator.speed = -2.0f;
             SwitchState(_factory.GroundState());
             //_ctx.isJumpPressed = false;
         }
