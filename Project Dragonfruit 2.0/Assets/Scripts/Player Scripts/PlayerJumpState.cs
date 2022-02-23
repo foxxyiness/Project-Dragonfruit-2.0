@@ -45,8 +45,10 @@ public class PlayerJumpState : PlayerBaseState
 
     void Jump()
     {
+        Debug.Log("JUMP");
             _ctx.rb.AddForce(Vector2.up * _ctx.powerJump, ForceMode2D.Impulse);
             _ctx.isGrounded = false;
+            _ctx.Animator.SetBool("isJumping", true);
     }
 
 

@@ -31,7 +31,7 @@ public class PlayerStateMachine : MonoBehaviour
     public Vector2 move;
 
     [Header("Impotant Bools")]
-    static public bool faceRight;
+    public bool faceRight;
     public bool isCrouching;
     public bool isGrounded;
     public bool isJumpPressed = false;
@@ -84,6 +84,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            Animator.SetBool("isJumping", false);
         }
     }
    
@@ -123,6 +124,22 @@ public class PlayerStateMachine : MonoBehaviour
             Animator.SetBool("isWalking", false);
         }
 
+        if (move.x < 0.0f && faceRight == false)
+        {
+            FlipPlayer();
+        }
+        else if (move.x > 0.0f && faceRight == true)
+        {
+            FlipPlayer();
+        }
+    }
+
+    public void FlipPlayer()
+    {
+        faceRight = !faceRight;
+        Vector2 localScale = gameObject.transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
     }
 
 }
