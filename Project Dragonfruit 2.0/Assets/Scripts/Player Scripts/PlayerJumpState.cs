@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,8 @@ public class PlayerJumpState : PlayerBaseState
     {
         if(_ctx.isGrounded)
         {
-            _ctx.Animator.speed = -2.0f;
+            _ctx.Animator.speed = -1.0f;
+            _ctx.StartCoroutine(JumpReverse());
             SwitchState(_factory.GroundState());
             //_ctx.isJumpPressed = false;
         }
@@ -51,6 +53,10 @@ public class PlayerJumpState : PlayerBaseState
             _ctx.isGrounded = false;
             _ctx.Animator.SetBool("isJumping", true);
     }
-
+    IEnumerator JumpReverse()
+    {
+        yield return new WaitForSeconds(1);
+    }
 
 }
+
