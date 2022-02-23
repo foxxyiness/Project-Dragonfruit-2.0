@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7726143330983005354}
-  - component: {fileID: 7923761633979212802}
+  - component: {fileID: 8378797686647809119}
   m_Layer: 0
   m_Name: SoundManagerObj
   m_TagString: Untagged
@@ -161,7 +161,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7923761633979212802
+--- !u!114 &8378797686647809119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7117695799498896569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fb240fdc144844da783fcd43895dfe, type: 3}
+  m_Script: {fileID: 11500000, guid: de70cc8d84ed49a4582de5324d3a1b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  AS: {fileID: 5227771216523657385}
+  soundsource:
+  - {fileID: 8300000, guid: 1128015623173a944bc02bfa1c2ba1aa, type: 3}
+  - {fileID: 8300000, guid: d9e82e351bf29ff4ca106798016e3fd3, type: 3}
+  blist: 

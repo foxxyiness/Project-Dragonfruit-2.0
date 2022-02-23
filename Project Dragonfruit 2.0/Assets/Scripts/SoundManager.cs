@@ -2,34 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerIdleState : PlayerBaseState
-{ 
-    public PlayerIdleState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
-        : base(currentContext, playerStateFactory) { }
-    public override void EnterState() 
+public class SoundManager : MonoBehaviour
+{
+    public AudioSource AS;
+    public AudioClip[] soundsource;
+    public bool[] blist;
+    public static SoundManager Instance;
+    
+    // Start is called before the first frame update
+    void Start()
     {
-        _ctx.sprintSpeed = 1.0f;
-        _ctx.Animator.SetBool("isIdle", true);
-        _ctx.Animator.SetBool("isWalking", false);
-        
+        Instance = this;
+    }
 
-    }
-    public override void UpdateState() 
+    // Update is called once per frame
+    void Update()
     {
-        CheckSwitchStates();
-    }
-    public override void ExitState() { }
-    public override void CheckSwitchStates() 
-    {
-        if (_ctx.isMovementPressed)
+        if(blist[0])
         {
-            SwitchState(_factory.OffState());
-        } else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
-        {
-            SwitchState(_factory.SprintState());
+            AS.clip = soundsource[0];
+            AS.Play();
+            blist[0] = false;
         }
-        
-
+        if (blist[1])
+        {
+            AS.clip = soundsource[1];
+            AS.Play();
+            blist[1] = false;
+        }
     }
-    public override void InitializeSubStates() { }
 }

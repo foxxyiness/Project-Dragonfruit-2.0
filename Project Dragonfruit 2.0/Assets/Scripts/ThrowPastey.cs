@@ -7,20 +7,29 @@ public class ThrowPastey : MonoBehaviour
     public float Speed = 4;
     public Vector3 LaunchOffset;
     public bool Thrown;
-    public Rigidbody2D RB2D;
+    private Rigidbody2D RB2D;
+    public PlayerStateMachine PSM;
 
     void Start()
     {
         RB2D = GetComponent<Rigidbody2D>();
-        if (Thrown && (PlayerMovement.faceRight == true))
+    }
+    void Update()
+    {
+        
+        if (Thrown && (PSM.faceRight ==true))
         {
             var direction = -transform.right + Vector3.up;
             RB2D.AddForce(direction * Speed, ForceMode2D.Impulse);
+            Debug.Log("Thrown Left");
+            Thrown = false;
         }
-        else if (Thrown && (PlayerMovement.faceRight == false))
+        else if (Thrown && (PSM.faceRight == false))
         {
             var direction = transform.right + Vector3.up;
             RB2D.AddForce(direction * Speed, ForceMode2D.Impulse);
+            Debug.Log("Thrown Right");
+            Thrown = false;
         }
     }
 
@@ -33,10 +42,4 @@ public class ThrowPastey : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

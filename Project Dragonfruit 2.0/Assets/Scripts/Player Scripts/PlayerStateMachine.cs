@@ -46,6 +46,8 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
     public bool groundCheck{ get { return isGrounded; } }
+
+
     //Awake is called earlier than Start
     void Awake()
     {
@@ -58,8 +60,6 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void Start()
     {
-     
-       
     }
     private void FixedUpdate()
     {
@@ -70,7 +70,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current State " +_currentState);
+        //Debug.Log("Current State " +_currentState);
         IsJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
