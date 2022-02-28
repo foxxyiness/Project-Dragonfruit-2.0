@@ -16,7 +16,10 @@ public class PlayerSprintState : PlayerBaseState
     {
         CheckSwitchStates();
     }
-    public override void ExitState() { }
+    public override void ExitState() 
+    {
+        _ctx.Animator.SetBool("isSprinting", false);
+    }
     public override void CheckSwitchStates() 
     {
         if (!_ctx.isMovementPressed && !_ctx.isSprintPressed)
