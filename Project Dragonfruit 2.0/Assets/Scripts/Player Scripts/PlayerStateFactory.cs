@@ -35,9 +35,13 @@ public class PlayerStateFactory
     {
         return new PlayerLaternJumpState(_context, this);
     }
-    public PlayerBaseState CrouchState()
+    public PlayerBaseState CrouchStateIdle()
     {
         return new PlayerCrouchingState(_context, this);
+    }
+    public PlayerBaseState CrouchStateWalking()
+    {
+        return new PlayerCrouchingStateWalking(_context, this);
     }
     public PlayerBaseState GroundState()
     {

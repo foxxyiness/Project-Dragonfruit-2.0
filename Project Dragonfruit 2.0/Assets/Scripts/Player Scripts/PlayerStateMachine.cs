@@ -18,7 +18,7 @@ public class PlayerStateMachine : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite standing;
     public Sprite crouching;
-    public PolygonCollider2D Collider;
+    public CapsuleCollider2D Collider;
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
 
@@ -45,6 +45,7 @@ public class PlayerStateMachine : MonoBehaviour
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
+    public bool isCrouchedPressed { get { return isCrouching; } }
     public bool groundCheck{ get { return isGrounded; } }
     //Awake is called earlier than Start
     void Awake()
@@ -127,6 +128,19 @@ public class PlayerStateMachine : MonoBehaviour
         else if (move.x > 0.0f && faceRight == true)
         {
             FlipPlayer();
+        }
+    }
+
+    void IsCrouchedPressed()
+    {
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            isCrouching = true;
+            Debug.Log("Crouched Pressed");
+        }
+        else
+        {
+            isCrouching = false;
         }
     }
 
