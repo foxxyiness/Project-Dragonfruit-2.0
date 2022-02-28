@@ -2,17 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCrouchingStateWalking : MonoBehaviour
+public class PlayerCrouchingStateWalking : PlayerBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerCrouchingStateWalking(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
+       : base(currentContext, playerStateFactory)
     {
-        
+        _ctx.sprintSpeed = 1.0f;
+        _ctx.Animator.SetBool("isWalking", true);
+        _ctx.Animator.SetBool("isIdle", false);
+        _ctx.Animator.SetBool("isCrouching", true);
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void EnterState()
     {
-        
+       
+    }
+    public override void UpdateState()
+    {
+        CheckSwitchStates();
+    }
+    public override void ExitState() { }
+    public override void CheckSwitchStates()
+    {
+        //When sprint is pressed, latern is off, envokes sprint state from factory
+        if (_ctx.isJumpPressed)
+        {
+            SwitchState(_factory.JumpState());
+        }
+    }
+    public override void InitializeSubStates()
+    {
+        if (!_ctx.isMovementPressed && _ctx.isCrouchedPressed)
+        {
+            SwitchState(_factory.CrouchStateIdle());
+        }
+        else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
+        {
+            SwitchState(_factory.SprintState());
+        }
+        else if(!_ctx.isMovementPressed && !_ctx.isCrouchedPressed)
+        {
+            SwitchState(_factory.Idle());
+        }
     }
 }
