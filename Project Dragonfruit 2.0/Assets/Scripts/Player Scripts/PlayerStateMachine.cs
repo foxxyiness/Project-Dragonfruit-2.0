@@ -141,4 +141,9 @@ public class PlayerStateMachine : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    public void PauseFrameJump()
+    {
+        Animator.speed = 0.0f;
+    }
+
 }
