@@ -12,7 +12,7 @@ public class PlayerGroundState : PlayerBaseState
     }
     public override void EnterState() 
     {
-           
+        _ctx.Animator.speed = 1.0f;
     }
     public override void UpdateState() 
     {
