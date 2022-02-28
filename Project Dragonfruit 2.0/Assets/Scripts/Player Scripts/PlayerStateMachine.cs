@@ -29,6 +29,8 @@ public class PlayerStateMachine : MonoBehaviour
     public float powerJump = 5.0f;
     public float sprintSpeed = 1.0f;
     public Vector2 move;
+    public float soundTimer = 0;
+    public float timeToPlaySound;
 
     [Header("Impotant Bools")]
     public bool faceRight;
@@ -70,13 +72,22 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Current State " +_currentState);
+        Debug.Log("Current State " + _currentState);
         IsJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     
+        if(isMoving==true && soundTimer <= timeToPlaySound)
+        {
+            soundTimer += Time.deltaTime;
+        }
+        else if(isMoving == true && soundTimer >= timeToPlaySound)
+        {
+            SoundManager.Instance.blist[1] = true;
+            soundTimer = 0;
+        }
     }
 
      void OnCollisionEnter2D(Collision2D col)

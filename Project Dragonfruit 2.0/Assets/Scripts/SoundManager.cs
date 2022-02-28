@@ -30,5 +30,11 @@ public class SoundManager : MonoBehaviour
             AS.Play();
             blist[1] = false;
         }
+        if (blist[2])
+        {
+            AS.clip = soundsource[1];
+            AS.Play();
+            blist[2] = false;
+        }
     }
 }

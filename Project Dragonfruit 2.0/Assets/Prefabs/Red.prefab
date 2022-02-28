@@ -67,6 +67,9 @@ MonoBehaviour:
   powerJump: 5
   sprintSpeed: 1
   move: {x: 0, y: 0}
+  soundTimer: 0
+  timeToPlaySound: 20
+  faceRight: 0
   isCrouching: 0
   isGrounded: 0
   isJumpPressed: 0
@@ -278,6 +281,7 @@ MonoBehaviour:
   isHidden: 0
   resetval: 1.5
   timer: 0
+  PSM: {fileID: 0}
 --- !u!1 &7630121546466426432
 GameObject:
   m_ObjectHideFlags: 0

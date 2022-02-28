@@ -8,6 +8,7 @@ public class StealthScript : MonoBehaviour
     public float resetval = 1.5f;
     public float timer;
     public static StealthScript Instance;
+    public PlayerStateMachine PSM;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden == false && resetval <= 1)
+        if(isHidden == false && resetval <= 1 && PSM.toggleLight == false)
         {
             if (timer >= 0)
             {
@@ -32,6 +33,21 @@ public class StealthScript : MonoBehaviour
                 timer = resetval;
             }
 
+        }
+        else if (isHidden == false && resetval <= 1 && PSM.toggleLight == true)
+        {
+            if (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+
+            }
+            else
+            {
+                HUDScript.Instance.stressLVL += HUDScript.Instance.addAmount2;
+                HUDScript.Instance.addAmount2 += 4;
+
+                timer = resetval;
+            }
         }
 
         else
