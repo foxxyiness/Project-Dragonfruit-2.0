@@ -8,7 +8,6 @@ public class PlayerCrouchingState : PlayerBaseState
         : base(currentContext, playerStateFactory) { }
     public override void EnterState()
     {
-        _ctx.sprintSpeed = 1.0f;
         _ctx.Animator.SetBool("isIdle", true);
         _ctx.Animator.SetBool("isWalking", false);
         _ctx.Animator.SetBool("isCrouching", true);
@@ -27,10 +26,6 @@ public class PlayerCrouchingState : PlayerBaseState
         if (_ctx.isMovementPressed && !_ctx.isCrouchedPressed)
         {
             SwitchState(_factory.OffState());
-        }
-        else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
-        {
-            SwitchState(_factory.SprintState());
         }
         else if(!_ctx.isMovementPressed && !_ctx.isCrouchedPressed)
         {
