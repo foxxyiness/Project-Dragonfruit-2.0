@@ -65,7 +65,6 @@ public class PlayerStateMachine : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(move.x * speed * sprintSpeed * Time.deltaTime, rb.velocity.y);
-
     }
 
     // Update is called once per frame
