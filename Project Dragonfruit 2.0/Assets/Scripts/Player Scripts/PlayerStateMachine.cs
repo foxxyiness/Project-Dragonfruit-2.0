@@ -75,6 +75,7 @@ public class PlayerStateMachine : MonoBehaviour
         IsJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
+        IsCrouchedPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     

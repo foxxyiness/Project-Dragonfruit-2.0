@@ -18,6 +18,7 @@ public class PlayerSprintState : PlayerBaseState
     }
     public override void ExitState() 
     {
+        _ctx.sprintSpeed = 1.0f;
         _ctx.Animator.SetBool("isSprinting", false);
     }
     public override void CheckSwitchStates() 
