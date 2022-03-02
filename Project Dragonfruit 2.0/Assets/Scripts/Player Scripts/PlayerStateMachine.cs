@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerStateMachine : MonoBehaviour
 {
@@ -88,6 +88,10 @@ public class PlayerStateMachine : MonoBehaviour
         {
             isGrounded = true;
             Animator.SetBool("isJumping", false);
+        }
+        if (col.gameObject.tag == "Victory")
+        {
+            SceneManager.LoadScene("VictoryScreen");
         }
     }
    
