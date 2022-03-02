@@ -22,9 +22,13 @@ public class PlayerOffState : PlayerBaseState
     }
     public override void CheckSwitchStates() 
     {
-        if (!_ctx.isMovementPressed)
+        if (!_ctx.isMovementPressed && !_ctx.isLightOn)
         {
             SwitchState(_factory.Idle());
+        }
+        else if (_ctx.isMovementPressed && _ctx.isLightOn)
+        {
+            SwitchState(_factory.LanternWalkState());
         }
         else if(_ctx.isMovementPressed && _ctx.isSprintPressed)
         {

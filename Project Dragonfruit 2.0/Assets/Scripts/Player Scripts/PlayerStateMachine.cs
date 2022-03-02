@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -37,7 +35,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isJumpPressed = false;
     public bool isSprinting = false;
     public bool isMoving = false;
-    public bool toggleLight;
+    public bool lightOn = false;
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -46,7 +44,9 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
     public bool isCrouchedPressed { get { return isCrouching; } }
+    public bool isLightOn { get { return lightOn; } }
     public bool groundCheck{ get { return isGrounded; } }
+    
     //Awake is called earlier than Start
     void Awake()
     {
@@ -72,9 +72,11 @@ public class PlayerStateMachine : MonoBehaviour
     {
         Debug.Log("Current State " +_currentState);
         IsJumpPressed();
+       // IsLanternJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
         IsCrouchedPressed();
+        IsLightPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     
@@ -99,6 +101,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
         else { isJumpPressed = false; }
     }
+   
     void IsSprintPressed()
     {
 
@@ -143,7 +146,21 @@ public class PlayerStateMachine : MonoBehaviour
             isCrouching = false;
         }
     }
-
+    void IsLightPressed()
+    {
+        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded)
+        {
+            lightOn = true;
+            latern.SetActive(true);
+            Debug.Log("Light On");
+        }
+        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded)
+        {
+            lightOn = false;
+            latern.SetActive(false);
+            Debug.Log("Light Off");
+        }
+    }
     public void FlipPlayer()
     {
         faceRight = !faceRight;

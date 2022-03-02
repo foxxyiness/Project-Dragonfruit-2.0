@@ -11,6 +11,8 @@ public class PlayerCrouchingStateWalking : PlayerBaseState
     }
     public override void EnterState()
     {
+        _ctx.lightOn = false;
+        _ctx.latern.SetActive(false);
         _ctx.sprintSpeed = 0.75f;
         _ctx.Animator.SetBool("isWalking", true);
         _ctx.Animator.SetBool("isIdle", false);

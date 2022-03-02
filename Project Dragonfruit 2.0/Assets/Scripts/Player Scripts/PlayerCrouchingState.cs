@@ -8,6 +8,8 @@ public class PlayerCrouchingState : PlayerBaseState
         : base(currentContext, playerStateFactory) { }
     public override void EnterState()
     {
+        _ctx.lightOn = false;
+        _ctx.latern.SetActive(false);
         _ctx.Animator.SetBool("isIdle", true);
         _ctx.Animator.SetBool("isWalking", false);
         _ctx.Animator.SetBool("isCrouching", true);
