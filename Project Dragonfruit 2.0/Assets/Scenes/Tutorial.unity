@@ -879,6 +879,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &87520621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4191405205786991683, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+  m_PrefabInstance: {fileID: 1298225196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &87520622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87520621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 87520624}
+  Pastry: {fileID: 0}
+  latern: {fileID: 1211888990}
+  laternSprite: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
+  standing: {fileID: 0}
+  crouching: {fileID: 0}
+  Collider: {fileID: 0}
+  StandingSize: {x: 0, y: 0}
+  CrouchingSize: {x: 0, y: 0}
+  rb: {fileID: 0}
+  speed: 300
+  movement: 0
+  powerJump: 5
+  sprintSpeed: 1
+  move: {x: 0, y: 0}
+  faceRight: 0
+  isCrouching: 0
+  isGrounded: 0
+  isJumpPressed: 0
+  isSprinting: 0
+  isMoving: 0
+  lightOn: 0
+--- !u!95 &87520624 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4191405205786991739, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+  m_PrefabInstance: {fileID: 1298225196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &102362841
 GameObject:
   m_ObjectHideFlags: 0
@@ -16393,7 +16438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7630121546466426432, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7630121546466426462, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -16413,6 +16458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4191405205786991708, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+    - {fileID: 4191405205786991740, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
 --- !u!1 &1299878945
 GameObject:
