@@ -148,13 +148,13 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsLightPressed()
     {
-        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded)
+        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
         {
             lightOn = true;
             latern.SetActive(true);
             Debug.Log("Light On");
         }
-        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded)
+        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
         {
             lightOn = false;
             latern.SetActive(false);

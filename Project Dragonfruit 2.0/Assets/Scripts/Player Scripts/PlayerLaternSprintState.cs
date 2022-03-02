@@ -37,6 +37,14 @@ public class PlayerLanternSprintState : PlayerBaseState
         {
             SwitchState(_factory.SprintState());
         }
+        else if(_ctx.isMovementPressed && _ctx.isCrouchedPressed)
+        {
+            SwitchState(_factory.CrouchStateWalking());
+        }
+        else if(!_ctx.isMovementPressed && _ctx.isCrouchedPressed)
+        {
+            SwitchState(_factory.CrouchStateIdle());
+        }
     }
     public override void InitializeSubStates() { }
 }
