@@ -4004,7 +4004,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!1 &322011732
+=======
+--- !u!4 &1402708229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402708227}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.95, y: 1.4658473, z: 22.382576}
+  m_LocalScale: {x: 1.6806, y: 1.6806, z: 1.6806}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 294608920}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1426513989
+>>>>>>> parent of 2e0ff8d (victory collider)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16380,12 +16399,17 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4191405205786991740, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+<<<<<<< HEAD
       propertyPath: latern
       value: 
       objectReference: {fileID: 1211888990}
     - target: {fileID: 4191405205786991740, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: crouching
       value: 
+=======
+      propertyPath: StandingSize.x
+      value: 1.51
+>>>>>>> parent of 2e0ff8d (victory collider)
       objectReference: {fileID: 0}
     - target: {fileID: 4191405205786991740, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: powerJump
@@ -16403,9 +16427,15 @@ PrefabInstance:
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
       value: 1025484937
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 7630121546466426462, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
       value: 1955504537
+=======
+    - target: {fileID: 7630121546466426432, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+>>>>>>> parent of 2e0ff8d (victory collider)
       objectReference: {fileID: 0}
     - target: {fileID: 7630121546466426462, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[3]
