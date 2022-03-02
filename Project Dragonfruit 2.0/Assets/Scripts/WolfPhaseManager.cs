@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WolfPhaseManager : MonoBehaviour
 {
@@ -52,12 +53,13 @@ public class WolfPhaseManager : MonoBehaviour
             
         }
 
-        if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false)
+        if (WolfMouth1.Instance.caughtplr == true) //&& WolfMouth1.Instance.kill == false)
         {
             Debug.Log("Caught!");
             anim.SetTrigger("Caught");
             anim.SetTrigger("Caught");
             WolfMouth1.Instance.kill = true;
+            SceneManager.LoadScene("DeathScreen");
         }
 
     }
