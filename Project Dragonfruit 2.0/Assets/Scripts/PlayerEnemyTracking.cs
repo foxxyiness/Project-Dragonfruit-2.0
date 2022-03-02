@@ -26,8 +26,8 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos.z = 0;
         BodyPos.y = 0;
         CurrPos = player.transform.position;
-        CurrPos.z = 0;
-        CurrPos.y = 0;
+        CurrPos.z = body.transform.position.z;
+
         float steptoward = speed * Time.deltaTime;
         if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
@@ -43,8 +43,11 @@ public class PlayerEnemyTracking : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-
-        body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+        
+        if (CurrPos.y <7 && CurrPos.y > -7)
+        { 
+            body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward); 
+        }
 
     }
 }

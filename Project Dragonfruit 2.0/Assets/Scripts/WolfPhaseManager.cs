@@ -53,7 +53,7 @@ public class WolfPhaseManager : MonoBehaviour
             
         }
 
-        if (WolfMouth1.Instance.caughtplr == true) //&& WolfMouth1.Instance.kill == false)
+        if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false)
         {
             Debug.Log("Caught!");
             anim.SetTrigger("Caught");
