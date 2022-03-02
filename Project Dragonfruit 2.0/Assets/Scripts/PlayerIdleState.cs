@@ -8,7 +8,7 @@ public class PlayerIdleState : PlayerBaseState
         : base(currentContext, playerStateFactory) { }
     public override void EnterState() 
     {
-        
+        _ctx.sprintSpeed = 1.0f;
         _ctx.Animator.SetBool("isIdle", true);
         _ctx.Animator.SetBool("isWalking", false);
         
@@ -27,26 +27,6 @@ public class PlayerIdleState : PlayerBaseState
         } else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
         {
             SwitchState(_factory.SprintState());
-        }
-        else if(!_ctx.isMovementPressed && _ctx.isCrouchedPressed)
-        {
-            SwitchState(_factory.CrouchStateIdle());
-        }
-        else if(_ctx.isMovementPressed && _ctx.isCrouchedPressed)
-        {
-            SwitchState(_factory.CrouchStateWalking());
-        }
-        else if(!_ctx.isMovementPressed && _ctx.isLightOn)
-        {
-            SwitchState(_factory.LanternState());
-        }
-        else if(_ctx.isMovementPressed && _ctx.isLightOn)
-        {
-            SwitchState(_factory.LanternWalkState());
-        }
-        else if(_ctx.isSprintPressed && _ctx.isLightOn)
-        {
-            SwitchState(_factory.LanternSprintState());
         }
         
 
