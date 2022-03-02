@@ -7,6 +7,7 @@ public class HUDScript : MonoBehaviour
 {
     public float stressLVL = 0;
     public float addAmount1;
+    public float addAmount2;
     public static HUDScript Instance;
     public TextMeshProUGUI Display1;
 

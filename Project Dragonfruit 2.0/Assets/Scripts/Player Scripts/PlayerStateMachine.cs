@@ -46,6 +46,8 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
     public bool groundCheck{ get { return isGrounded; } }
+
+
     //Awake is called earlier than Start
     void Awake()
     {
@@ -58,8 +60,6 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void Start()
     {
-     
-       
     }
     private void FixedUpdate()
     {
@@ -70,13 +70,12 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current State " +_currentState);
+        Debug.Log("Current State " + _currentState);
         IsJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-    
     }
 
      void OnCollisionEnter2D(Collision2D col)
@@ -115,10 +114,14 @@ public class PlayerStateMachine : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMoving = true;
+            Animator.SetBool("isWalking", true);
             Debug.Log("Movement Pressed");
         }
         else
+        { 
             isMoving = false;
+            Animator.SetBool("isWalking", false);
+        }
 
         if (move.x < 0.0f && faceRight == false)
         {

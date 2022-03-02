@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1592389248793940116}
   - component: {fileID: 1592389248793940117}
   - component: {fileID: 1592389248793940118}
+  - component: {fileID: 4922737694748994651}
   m_Layer: 0
   m_Name: Lit_Player
   m_TagString: Player
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce44592b625e174f83ef1f25eb143c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pastry: {fileID: 0}
   latern: {fileID: 5030576139660489354}
   laternSprite: {fileID: 21300000, guid: 08016b5ba43ca3f46a033811adfe4026, type: 3}
   SpriteRenderer: {fileID: 0}
@@ -112,7 +114,6 @@ MonoBehaviour:
   movement: 0
   powerJump: 300
   sprintSpeed: 300
-  faceRight: 0
   isCrouching: 0
   isGrounded: 0
   isSprinting: 0
@@ -154,6 +155,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.1, y: 0.14}
   m_Size: {x: 2.06, y: 3.11}
   m_Direction: 0
+--- !u!114 &4922737694748994651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592389248793940105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2efb1982dcd5c488e8f4e302e7076b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  resetval: 2
+  timer: 0
 --- !u!1 &5030576139660489354
 GameObject:
   m_ObjectHideFlags: 0

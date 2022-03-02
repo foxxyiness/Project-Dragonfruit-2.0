@@ -7,6 +7,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public GameObject player;
     public GameObject body;
     public Vector3 CurrPos;
+    public Vector3 BodyPos;
     public float speed = 1f;
     public bool faceRight = false;
 
@@ -15,14 +16,18 @@ public class PlayerEnemyTracking : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        CurrPos = body.transform.localPosition;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        BodyPos = body.transform.position;
+        BodyPos.z = 0;
+        BodyPos.y = 0;
         CurrPos = player.transform.position;
         CurrPos.z = 0;
+        CurrPos.y = 0;
         float steptoward = speed * Time.deltaTime;
         if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
