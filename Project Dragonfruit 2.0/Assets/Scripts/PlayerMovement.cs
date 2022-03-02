@@ -34,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
     public bool isSprinting;
     public bool toggleLight;
 
+    public static PlayerMovement Instance;
+
+    void Play()
+    {
+        Instance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
