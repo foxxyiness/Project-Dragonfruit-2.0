@@ -19,7 +19,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden == false && resetval <= 1 && PSM.lightOn == false)
+       /* if(isHidden == false && resetval <= 1 && PSM.lightOn == false)
         {
             if (timer >= 0)
             {
@@ -53,6 +53,6 @@ public class StealthScript : MonoBehaviour
         else
         {
             timer = resetval;
-        }
+        } */
     }
 }
