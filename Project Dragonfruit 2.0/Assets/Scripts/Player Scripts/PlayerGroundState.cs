@@ -22,9 +22,13 @@ public class PlayerGroundState : PlayerBaseState
     public override void CheckSwitchStates()
     {
         //When sprint is pressed, latern is off, envokes sprint state from factory
-        if(_ctx.isJumpPressed)
+        if(_ctx.isJumpPressed && !_ctx.isLightOn)
         {
             SwitchState(_factory.JumpState());
+        }
+        if(_ctx.isJumpPressed && _ctx.isLightOn)
+        {
+            SwitchState(_factory.LanternJumpState());
         }
     }
     public override void InitializeSubStates()
@@ -40,6 +44,18 @@ public class PlayerGroundState : PlayerBaseState
         else if (_ctx.isMovementPressed && _ctx.isSprintPressed)
         {
             SetSubState(_factory.SprintState());
+        }
+        else if(_ctx.isMovementPressed && _ctx.isLightOn)
+        {
+            SetSubState(_factory.LanternWalkState());
+        }
+        else if(!_ctx.isMovementPressed && _ctx.isLightOn)
+        {
+            SetSubState(_factory.LanternState());
+        }
+        else if(_ctx.isSprintPressed && _ctx.isLightOn)
+        {
+            SetSubState(_factory.LanternSprintState());
         }
 
 
