@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerStateMachine : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class PlayerStateMachine : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite standing;
     public Sprite crouching;
-    public PolygonCollider2D Collider;
+    public CapsuleCollider2D Collider;
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
 
@@ -28,7 +26,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float movement;
     public float powerJump = 5.0f;
     public float sprintSpeed = 1.0f;
-    public Vector2 move;
+    public Vector2 move; 
 
     [Header("Impotant Bools")]
     public bool faceRight;
@@ -37,7 +35,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isJumpPressed = false;
     public bool isSprinting = false;
     public bool isMoving = false;
-    public bool toggleLight;
+    public bool lightOn = false;
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -45,9 +43,10 @@ public class PlayerStateMachine : MonoBehaviour
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
+    public bool isCrouchedPressed { get { return isCrouching; } }
+    public bool isLightOn { get { return lightOn; } }
     public bool groundCheck{ get { return isGrounded; } }
-
-
+    
     //Awake is called earlier than Start
     void Awake()
     {
@@ -60,22 +59,27 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void Start()
     {
+     
+       
     }
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(move.x * speed * sprintSpeed * Time.deltaTime, rb.velocity.y);
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current State " + _currentState);
+        Debug.Log("Current State " +_currentState);
         IsJumpPressed();
+       // IsLanternJumpPressed();
         IsSprintPressed();
         IsMovementPressed();
+        IsCrouchedPressed();
+        IsLightPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+    
     }
 
      void OnCollisionEnter2D(Collision2D col)
@@ -84,6 +88,10 @@ public class PlayerStateMachine : MonoBehaviour
         {
             isGrounded = true;
             Animator.SetBool("isJumping", false);
+        }
+        if (col.gameObject.tag == "Victory")
+        {
+            SceneManager.LoadScene("VictoryScreen");
         }
     }
    
@@ -97,6 +105,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
         else { isJumpPressed = false; }
     }
+   
     void IsSprintPressed()
     {
 
@@ -114,14 +123,10 @@ public class PlayerStateMachine : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMoving = true;
-            Animator.SetBool("isWalking", true);
             Debug.Log("Movement Pressed");
         }
         else
-        { 
             isMoving = false;
-            Animator.SetBool("isWalking", false);
-        }
 
         if (move.x < 0.0f && faceRight == false)
         {
@@ -133,6 +138,33 @@ public class PlayerStateMachine : MonoBehaviour
         }
     }
 
+    void IsCrouchedPressed()
+    {
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            isCrouching = true;
+            Debug.Log("Crouched Pressed");
+        }
+        else
+        {
+            isCrouching = false;
+        }
+    }
+    void IsLightPressed()
+    {
+        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        {
+            lightOn = true;
+            latern.SetActive(true);
+            Debug.Log("Light On");
+        }
+        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        {
+            lightOn = false;
+            latern.SetActive(false);
+            Debug.Log("Light Off");
+        }
+    }
     public void FlipPlayer()
     {
         faceRight = !faceRight;
