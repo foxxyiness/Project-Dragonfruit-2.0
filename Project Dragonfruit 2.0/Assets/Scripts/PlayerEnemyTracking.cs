@@ -26,8 +26,8 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos.z = 0;
         BodyPos.y = 0;
         CurrPos = player.transform.position;
-        CurrPos.z = body.transform.position.z;
-
+        CurrPos.z = 0;
+        CurrPos.y = 0;
         float steptoward = speed * Time.deltaTime;
         if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
@@ -43,10 +43,10 @@ public class PlayerEnemyTracking : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-        
-        if (CurrPos.y <7 && CurrPos.y > -7)
+
+        if (WolfMouth1.Instance.caughtplr == false)
         { 
-            body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward); 
+            body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }
 
     }

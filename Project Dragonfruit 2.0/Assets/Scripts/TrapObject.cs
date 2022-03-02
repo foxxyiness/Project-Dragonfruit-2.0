@@ -62,7 +62,7 @@ public class TrapObject : MonoBehaviour
             }
             soundplay = true;
         }
-        if (coll.gameObject.tag == "Player" && isdestructible == false)
+        if (coll.gameObject.tag == "Player" && isdestructible == false) //if the object is a bush
         {
             soundplay = true;
             HUDScript.Instance.stressLVL += pointsadded;
