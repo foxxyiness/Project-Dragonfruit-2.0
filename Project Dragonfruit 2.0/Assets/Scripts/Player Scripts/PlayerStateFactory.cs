@@ -14,18 +14,22 @@ public class PlayerStateFactory
     {
         return new PlayerOffState(_context, this);
     }
-    public PlayerBaseState LaternState()
+    public PlayerBaseState LanternWalkState()
     {
-        return new PlayerLaternState(_context, this);
+        return new PlayerLanternWalkState(_context, this);
+    }
+    public PlayerBaseState LanternState()
+    {
+        return new PlayerLanternState(_context, this);
     }
 
     public PlayerBaseState SprintState()
     {
         return new PlayerSprintState(_context, this);
     }
-    public PlayerBaseState LaternSprintState()
+    public PlayerBaseState LanternSprintState()
     {
-        return new PlayerLaternSprintState(_context, this);
+        return new PlayerLanternSprintState(_context, this);
     }
     public PlayerBaseState JumpState()
     {
@@ -33,11 +37,15 @@ public class PlayerStateFactory
     }
     public PlayerBaseState LanternJumpState()
     {
-        return new PlayerLaternJumpState(_context, this);
+        return new PlayerLanternJumpState(_context, this);
     }
-    public PlayerBaseState CrouchState()
+    public PlayerBaseState CrouchStateIdle()
     {
         return new PlayerCrouchingState(_context, this);
+    }
+    public PlayerBaseState CrouchStateWalking()
+    {
+        return new PlayerCrouchingStateWalking(_context, this);
     }
     public PlayerBaseState GroundState()
     {

@@ -31,7 +31,7 @@ public class TrapObject : MonoBehaviour
             }
             if (timer >= timedestroy)
             {
-                Destroy(parent);
+                Destroy(gameObject);//Ryan changed this
             }
         }
         if (isdestructible == false && activated == true)
