@@ -29,6 +29,8 @@ public class PlayerStateMachine : MonoBehaviour
     public float powerJump = 5.0f;
     public float sprintSpeed = 1.0f;
     public Vector2 move;
+    public float soundTimer = 0;
+    public float soundDelay;      
 
     [Header("Impotant Bools")]
     public bool faceRight;
@@ -38,6 +40,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprinting = false;
     public bool isMoving = false;
     public bool toggleLight;
+    public bool testBool;
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -76,6 +79,28 @@ public class PlayerStateMachine : MonoBehaviour
         IsMovementPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+
+        if(isMoving == true)
+        {
+            if (soundTimer >= soundDelay)
+            { 
+                SoundManager.Instance.blist[1] = true;
+                soundTimer = 0;
+            }
+            else
+            {
+                soundTimer += Time.deltaTime;
+            }
+
+        }
+
+
+        if (isMoving == false)
+        {
+            soundTimer = 0;
+            SoundManager.Instance.blist[1] = false;
+        }
     }
 
      void OnCollisionEnter2D(Collision2D col)
@@ -117,10 +142,12 @@ public class PlayerStateMachine : MonoBehaviour
             Animator.SetBool("isWalking", true);
             Debug.Log("Movement Pressed");
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.D) || (Input.GetKeyUp(KeyCode.A)))
         { 
             isMoving = false;
             Animator.SetBool("isWalking", false);
+            Debug.Log("Movement Released");
+
         }
 
         if (move.x < 0.0f && faceRight == false)
