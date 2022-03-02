@@ -44,6 +44,14 @@ public class PlayerJumpState : PlayerBaseState
         {
             SetSubState(_factory.SprintState());
         }
+        else if (_ctx.isMovementPressed && _ctx.isCrouchedPressed)
+        {
+            SetSubState(_factory.CrouchStateWalking());
+        }
+        else if (!_ctx.isMovementPressed && _ctx.isCrouchedPressed)
+        {
+            SetSubState(_factory.CrouchStateIdle());
+        }
     }
 
     void Jump()
