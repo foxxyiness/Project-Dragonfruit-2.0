@@ -956,6 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stressLVL: 0
   addAmount1: 1
+  addAmount2: 0
   Display1: {fileID: 1214796207}
 --- !u!114 &1837667568
 MonoBehaviour:
@@ -1425,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9461
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_LocalPosition.y
