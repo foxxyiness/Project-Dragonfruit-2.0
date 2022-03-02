@@ -13,7 +13,7 @@ public class PlayerCrouchingStateWalking : PlayerBaseState
     {
         _ctx.lightOn = false;
         _ctx.latern.SetActive(false);
-        _ctx.sprintSpeed = 0.75f;
+        _ctx.sprintSpeed = 0.5f;
         _ctx.Animator.SetBool("isWalking", true);
         _ctx.Animator.SetBool("isIdle", false);
         _ctx.Animator.SetBool("isCrouching", true);
