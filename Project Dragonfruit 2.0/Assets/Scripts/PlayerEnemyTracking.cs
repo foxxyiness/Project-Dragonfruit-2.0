@@ -45,7 +45,7 @@ public class PlayerEnemyTracking : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        if (WolfMouth1.Instance.caughtplr == false && PSM.isGrounded == true)
+        if (/*WolfMouth1.Instance.caughtplr == false ||*/ PSM.isGrounded == true)
         { 
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }

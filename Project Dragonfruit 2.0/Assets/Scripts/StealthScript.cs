@@ -9,6 +9,7 @@ public class StealthScript : MonoBehaviour
     public float timer;
     public static StealthScript Instance;
     public PlayerStateMachine PSM;
+    public bool heartbeat = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,16 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if(isHidden == false && resetval <= 1 && PSM.lightOn == false)
+        if(timer==0)
+        {
+            heartbeat = true;
+        }
+        if (isHidden == false && resetval <= 1 && PSM.lightOn == false)
         {
             if (timer >= 0)
             {
                 timer -= Time.deltaTime;
-                
+
             }
             else
             {
@@ -53,6 +58,6 @@ public class StealthScript : MonoBehaviour
         else
         {
             timer = resetval;
-        } */
+        }
     }
 }
