@@ -8,7 +8,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public GameObject body;
     public Vector3 CurrPos;
     public Vector3 BodyPos;
-    public float speed = 1f;
+    public float speed = 10f;
     public bool faceRight = false;
     public PlayerStateMachine PSM;
 
@@ -45,7 +45,7 @@ public class PlayerEnemyTracking : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        if (WolfMouth1.Instance.caughtplr == false && PSM.isGrounded == true)
+        if (WolfMouth1.Instance.caughtplr == false || PSM.isGrounded == true)
         { 
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }

@@ -20,6 +20,10 @@ public class HUDScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(stressLVL > 100)
+        {
+            stressLVL = 100;
+        }
         Display1.text = stressLVL.ToString();
     }
 }
