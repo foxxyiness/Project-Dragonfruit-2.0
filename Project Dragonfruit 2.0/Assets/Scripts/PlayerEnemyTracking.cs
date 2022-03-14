@@ -11,6 +11,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public float speed = 1f;
     public bool faceRight = false;
     public PlayerStateMachine PSM;
+    public float yoffset = 1f;
 
     
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos.y = 0;
         CurrPos = player.transform.position;
         CurrPos.z = 0;
-        CurrPos.y = 0;
+        CurrPos.y += yoffset;
         float steptoward = speed * Time.deltaTime;
         if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {

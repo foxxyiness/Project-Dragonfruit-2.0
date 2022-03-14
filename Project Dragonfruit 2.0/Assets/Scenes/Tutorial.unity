@@ -4851,11 +4851,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730496, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2827268
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.2827268
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6541
       objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730501, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4903,7 +4915,7 @@ PrefabInstance:
       objectReference: {fileID: 87520622}
     - target: {fileID: 7348471456335730503, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: speed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7348471457386973756, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_IsActive
@@ -27031,7 +27043,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2209790003729314672, guid: 964a9c5e912832948bf464e4941b35c5, type: 3}
       propertyPath: stressLVL
-      value: 26
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4556237952943811128, guid: 964a9c5e912832948bf464e4941b35c5, type: 3}
       propertyPath: m_Pivot.x
@@ -27130,6 +27142,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 903226513}
     m_Modifications:
+    - target: {fileID: 8340230907848287344, guid: 78e6b6e90eddc1a4e99458a90bfe2a35, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c45bb27d0960314182a80de6d5c7550, type: 2}
+    - target: {fileID: 8340230907848287344, guid: 78e6b6e90eddc1a4e99458a90bfe2a35, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8340230907848287350, guid: 78e6b6e90eddc1a4e99458a90bfe2a35, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
