@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WolfPhaseManager : MonoBehaviour
 {
@@ -8,9 +9,10 @@ public class WolfPhaseManager : MonoBehaviour
     public GameObject Phase4WolfHitbox;
     public GameObject Phase3WolfEntity;
     public Animator anim;
-    bool b1 = false;
-    bool b2 = false;
-    bool b3 = false;
+    private bool b1 = false;
+    private bool b2 = false;
+    private bool b3 = false;
+    private bool b4 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,10 @@ public class WolfPhaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL <= 25f)
+        if(HUDScript.Instance.stressLVL ==0f && HUDScript.Instance.stressLVL <= 25f && b4==false)
         {
             StealthScript.Instance.resetval = 2f;
+            b4 = true;
 
         }
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f && b1 == false)
@@ -55,8 +58,14 @@ public class WolfPhaseManager : MonoBehaviour
             Debug.Log("Caught!");
             anim.SetTrigger("Caught");
             anim.SetTrigger("Caught");
-            WolfMouth1.Instance.kill = true;
+
+            //SceneManager.LoadScene("DeathScreen");
         }
 
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Outwards"))
+        {
+            WolfMouth1.Instance.kill = true;
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
 }

@@ -10,6 +10,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public Vector3 BodyPos;
     public float speed = 1f;
     public bool faceRight = false;
+    public PlayerStateMachine PSM;
 
     
     // Start is called before the first frame update
@@ -44,7 +45,10 @@ public class PlayerEnemyTracking : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+        if (WolfMouth1.Instance.caughtplr == false && PSM.isGrounded == true)
+        { 
+            body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+        }
 
     }
 }
