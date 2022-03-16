@@ -29,7 +29,7 @@ public class WolfMouth1 : MonoBehaviour
             DisTarget = coll.gameObject;
             distracted = true;
         }
-        if (coll.gameObject.tag == "Player" && distracted == false)
+        if (coll.gameObject.tag == "Player" && distracted == false && StealthScript.Instance.isHidden == false)
         {
             caughtplr = true;
             Debug.Log("Player caught by hitbox");

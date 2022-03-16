@@ -20,10 +20,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer==0)
-        {
-            heartbeat = true;
-        }
+        
         if (isHidden == false && resetval <= 1 && PSM.lightOn == false)
         {
             if (timer >= 0)
