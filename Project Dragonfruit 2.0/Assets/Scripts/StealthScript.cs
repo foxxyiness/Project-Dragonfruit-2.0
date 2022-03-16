@@ -51,6 +51,23 @@ public class StealthScript : MonoBehaviour
                 timer = resetval;
             }
         }
+        else if (isHidden == true)
+        {
+            if (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+
+            }
+            else
+            {
+                HUDScript.Instance.stressLVL -= HUDScript.Instance.addAmount1;
+
+                timer = resetval;
+            }
+
+        }
+
+
 
         else
         {
