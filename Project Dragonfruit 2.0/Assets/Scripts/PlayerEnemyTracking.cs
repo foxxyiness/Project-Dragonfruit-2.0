@@ -29,7 +29,10 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos.y = 0;
         CurrPos = player.transform.position;
         CurrPos.z = 0;
-        CurrPos.y += yoffset;
+        if (PSM.isGrounded == true)
+            CurrPos.y += yoffset;
+        else
+            CurrPos.y = body.transform.position.y;
         float steptoward = speed * Time.deltaTime;
         if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
