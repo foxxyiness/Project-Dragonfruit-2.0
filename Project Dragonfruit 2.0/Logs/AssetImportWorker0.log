@@ -15,7 +15,7 @@ C:/Users/jpearson1/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56553
+62023
 Successfully changed project path to: C:/Users/jpearson1/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 C:/Users/jpearson1/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/jpearson1/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 139.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 163.19 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.7f1 (6bd9e232123f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,37 +63,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009220 seconds.
+Registered in 0.009807 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 144.38 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 155.39 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.814 seconds
+- Completed reload, in  0.881 seconds
 Domain Reload Profiling:
-	ReloadAssembly (814ms)
-		BeginReloadAssembly (96ms)
+	ReloadAssembly (881ms)
+		BeginReloadAssembly (112ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (618ms)
-			LoadAssemblies (93ms)
+		EndReloadAssembly (663ms)
+			LoadAssemblies (109ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (126ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (393ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (422ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (21ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (145ms)
+				RefreshPlugins (156ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadAttributes (186ms)
 				ProcessInitializeOnLoadMethodAttributes (58ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -101,12 +101,12 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013354 seconds.
+Registered in 0.015001 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 160.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 293.38 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
   at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
@@ -126,43 +126,43 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.348 seconds
+- Completed reload, in  5.344 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4350ms)
-		BeginReloadAssembly (132ms)
+	ReloadAssembly (5346ms)
+		BeginReloadAssembly (155ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (4099ms)
-			LoadAssemblies (123ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (5061ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (366ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (81ms)
-			SetupLoadedEditorAssemblies (3450ms)
+			SetupTypeCache (388ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (163ms)
+			SetupLoadedEditorAssemblies (4212ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (25ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (161ms)
-				BeforeProcessingInitializeOnLoad (156ms)
-				ProcessInitializeOnLoadAttributes (2894ms)
-				ProcessInitializeOnLoadMethodAttributes (204ms)
-				AfterProcessingInitializeOnLoad (21ms)
+				RefreshPlugins (294ms)
+				BeforeProcessingInitializeOnLoad (308ms)
+				ProcessInitializeOnLoadAttributes (3366ms)
+				ProcessInitializeOnLoadMethodAttributes (196ms)
+				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (18ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
-Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5567 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 50 unused Assets / (0.9 MB). Loaded Objects now: 6014.
 Memory consumption went from 221.7 MB to 220.8 MB.
-Total: 16.166200 ms (FindLiveObjects: 0.485300 ms CreateObjectMapping: 0.452200 ms MarkObjects: 14.809300 ms  DeleteObjects: 0.418200 ms)
+Total: 14.395700 ms (FindLiveObjects: 0.458200 ms CreateObjectMapping: 0.452600 ms MarkObjects: 13.098100 ms  DeleteObjects: 0.385500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -176,25 +176,73 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3014479.872613 seconds.
+  Time since last request: 3188987.940102 seconds.
   path: Assets/imports/Player Animations/Idle/Lit_Player.controller
   artifactKey: Guid(ddfd6d65d8dc14949949d1c78cf83b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/imports/Player Animations/Idle/Lit_Player.controller using Guid(ddfd6d65d8dc14949949d1c78cf83b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65903ccded9a8d9bb5d2992042a3f489') in 0.063376 seconds 
+Start importing Assets/imports/Player Animations/Idle/Lit_Player.controller using Guid(ddfd6d65d8dc14949949d1c78cf83b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3055b765a395f8614c1d6698309b9ecd') in 0.059046 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 201.262239 seconds.
-  path: Assets/imports/Player Animations/Walking Animation/Walking Animation.anim
-  artifactKey: Guid(f577108fe98b80f46b897f2bbe3bd675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/imports/Player Animations/Walking Animation/Walking Animation.anim using Guid(f577108fe98b80f46b897f2bbe3bd675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36935ed07c74c1c33e5a8f50b57b7c0b') in 0.010856 seconds 
+  Time since last request: 0.000105 seconds.
+  path: Assets/imports/Player Animations/CrouchWalk/DarkRed_CrouchWalkAnim_0021_Layer-3.png
+  artifactKey: Guid(72e3c2819caf64042a508d43d91e128e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/imports/Player Animations/CrouchWalk/DarkRed_CrouchWalkAnim_0021_Layer-3.png using Guid(72e3c2819caf64042a508d43d91e128e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754b615b72ac1142fddf1f87f0dfb812') in 0.177934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 85.808860 seconds.
+  path: Assets/imports/Death Image.png
+  artifactKey: Guid(cf1d054fcef3d8e4880c92ec40ca955b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/imports/Death Image.png using Guid(cf1d054fcef3d8e4880c92ec40ca955b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dbde51b6df85c36ad452ead1a39e49c') in 0.099270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.546162 seconds.
+  path: Assets/Scripts/Player Scripts
+  artifactKey: Guid(67f26cbc18c14b3438e87685db505d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts using Guid(67f26cbc18c14b3438e87685db505d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d37d0db23d7fc1c41aacc39cec702a') in 0.004284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.109895 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerCrouchingState.cs
+  artifactKey: Guid(0f44b906400cb3c4cbd6b2b2f1bc4e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerCrouchingState.cs using Guid(0f44b906400cb3c4cbd6b2b2f1bc4e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6282276d1e0319c65268c84263b52ed3') in 0.021988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 266.695337 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerCrouchingStateWalking.cs
+  artifactKey: Guid(d2b68374e17f690438bab99a331eb802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerCrouchingStateWalking.cs using Guid(d2b68374e17f690438bab99a331eb802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfd6196d27df0ca1c89e58a804fe8912') in 0.006828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.760045 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerBaseState.cs
+  artifactKey: Guid(916fe0bcc11e6e54b9addf86d049a60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerBaseState.cs using Guid(916fe0bcc11e6e54b9addf86d049a60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b56cc9170d1404dc6a848b2494428ed') in 0.005035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.104287 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerStateFactory.cs
+  artifactKey: Guid(82813f9e2bb855044a85ba5de56844b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerStateFactory.cs using Guid(82813f9e2bb855044a85ba5de56844b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a178ebad49e4ff4e533cea44b3c09082') in 0.004738 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.732047 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerStateMachine.cs
+  artifactKey: Guid(4009b7b3900594d4f926823d060d20ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerStateMachine.cs using Guid(4009b7b3900594d4f926823d060d20ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129a2401a91cac4b7b5539de82534485') in 0.003822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.091006 seconds.
+  path: Assets/Scripts/Player Scripts/PlayerJumpState.cs
+  artifactKey: Guid(13c50ba0fa1775c458a0161564fde450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player Scripts/PlayerJumpState.cs using Guid(13c50ba0fa1775c458a0161564fde450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ceed01a42244fe4ee467078dc5f2478') in 0.005944 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012319 seconds.
+Registered in 0.013824 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 4.68 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
   at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\jpearson1\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
@@ -214,40 +262,40 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.785 seconds
+- Completed reload, in  3.290 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4786ms)
-		BeginReloadAssembly (235ms)
+	ReloadAssembly (3291ms)
+		BeginReloadAssembly (240ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (79ms)
-		EndReloadAssembly (4351ms)
-			LoadAssemblies (186ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (2873ms)
+			LoadAssemblies (166ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (555ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (130ms)
-			SetupLoadedEditorAssemblies (2534ms)
+			SetupTypeCache (571ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (109ms)
+			SetupLoadedEditorAssemblies (1464ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (5ms)
-				BeforeProcessingInitializeOnLoad (317ms)
-				ProcessInitializeOnLoadAttributes (1879ms)
-				ProcessInitializeOnLoadMethodAttributes (256ms)
-				AfterProcessingInitializeOnLoad (32ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (173ms)
+				ProcessInitializeOnLoadAttributes (1111ms)
+				ProcessInitializeOnLoadMethodAttributes (147ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (36ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5427 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 39 unused Assets / (0.8 MB). Loaded Objects now: 6017.
-Memory consumption went from 212.6 MB to 211.8 MB.
-Total: 37.510400 ms (FindLiveObjects: 0.849300 ms CreateObjectMapping: 0.891400 ms MarkObjects: 35.144400 ms  DeleteObjects: 0.622500 ms)
+Unloading 5429 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (0.8 MB). Loaded Objects now: 6056.
+Memory consumption went from 221.2 MB to 220.4 MB.
+Total: 19.526100 ms (FindLiveObjects: 1.048400 ms CreateObjectMapping: 0.925400 ms MarkObjects: 17.107400 ms  DeleteObjects: 0.443000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -259,9 +307,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 2511.649450 seconds.
-  path: Assets/imports/Player Animations/RunningNoLatern/RunningAnimation.anim
-  artifactKey: Guid(75b494042f8cd914f8533e559bb441e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/imports/Player Animations/RunningNoLatern/RunningAnimation.anim using Guid(75b494042f8cd914f8533e559bb441e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04bea21352b3cbf0cc4c993d32e7039b') in 0.029275 seconds 
