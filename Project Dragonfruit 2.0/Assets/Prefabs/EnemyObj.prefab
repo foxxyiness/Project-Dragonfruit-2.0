@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582d69d8a4e88e94db1cba777ee72616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 4191405205786991683, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
   body: {fileID: 7348471456335730496}
   CurrPos: {x: 0, y: 0, z: 0}
   BodyPos: {x: 0, y: 0, z: 0}
@@ -465,4 +465,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodytagname: 
   caughtplr: 0
+  kill: 0
+  distracted: 0
   DisTarget: {fileID: 0}

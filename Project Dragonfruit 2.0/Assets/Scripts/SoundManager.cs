@@ -18,23 +18,16 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(blist[0])
+        for (int i = 0; i < soundsource.Length; i++)
         {
-            AS.clip = soundsource[0];
-            AS.Play();
-            blist[0] = false;
+            if (blist[i] == true)
+            {
+                AS.clip = soundsource[i];
+                AS.Play();
+                blist[i] = false;
+                Debug.Log("Sound " + i + " Played");
+            }
         }
-        if (blist[1])
-        {
-            AS.clip = soundsource[1];
-            AS.Play();
-            blist[1] = false;
-        }
-        if (blist[2])
-        {
-            AS.clip = soundsource[1];
-            AS.Play();
-            blist[2] = false;
-        }
+
     }
 }
