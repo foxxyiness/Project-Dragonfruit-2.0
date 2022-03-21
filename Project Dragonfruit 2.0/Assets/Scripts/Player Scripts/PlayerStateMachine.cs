@@ -87,6 +87,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            move.y = 0f;
             Animator.SetBool("isJumping", false);
         }
         if (col.gameObject.tag == "Victory")
