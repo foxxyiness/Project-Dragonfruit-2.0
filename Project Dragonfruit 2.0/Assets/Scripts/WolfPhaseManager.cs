@@ -26,25 +26,41 @@ public class WolfPhaseManager : MonoBehaviour
         {
             StealthScript.Instance.resetval = 2f;
             b4 = true;
+            b1 = false;
+            b2 = false;
+            b3 = false;
+            Phase2WolfEntity.SetActive(b4);
 
         }
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f && b1 == false)
         {
             b1 = true;
+            b2 = false;
+            b3 = false;
+            b4 = false;
             Phase2WolfEntity.SetActive(b1);
+            Phase3WolfEntity.SetActive(!b1);
+            Phase4WolfHitbox.SetActive(!b1);
             StealthScript.Instance.resetval = 1.5f;
         }
         if (HUDScript.Instance.stressLVL > 50f && HUDScript.Instance.stressLVL <= 75f && b2 == false)
         {
+            b1 = false;
             b2 = true;
+            b3 = false;
+            b4 = false;
             Phase2WolfEntity.SetActive(!b2);
             Phase3WolfEntity.SetActive(b2);
+            Phase4WolfHitbox.SetActive(!b2);
             anim.Play("Entry");
             StealthScript.Instance.resetval = 1f;
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
+            b1 = false;
+            b2 = false;
             b3 = true;
+            b4 = false;
             Debug.Log("Speed up!");
             anim.SetFloat("SpeedMult", 2);
             Phase3WolfEntity.SetActive(b3);
