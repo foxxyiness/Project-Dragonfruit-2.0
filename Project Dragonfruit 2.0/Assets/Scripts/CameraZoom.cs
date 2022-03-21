@@ -8,7 +8,7 @@ public class CameraZoom : MonoBehaviour
     public bool zoomout; // tells camera to zoom out
     public bool zoomin; // tells camera to zoom in
     public bool resetcam; //resets camera to 60f
-    public CameraZoom Instance;
+    public static CameraZoom Instance;
     
     // Start is called before the first frame update
     void Start()
