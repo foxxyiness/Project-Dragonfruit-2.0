@@ -27,6 +27,14 @@ public class PlayerEnemyTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindWithTag("Goody"))
+        { 
+            target = GameObject.FindWithTag("Goody");
+        }
+        else
+        {
+            target = player;
+        }
         
         BodyPos = body.transform.position;
         BodyPos.z = body.transform.position.z;

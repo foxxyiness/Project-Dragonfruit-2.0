@@ -13,6 +13,7 @@ public class WolfPhaseManager : MonoBehaviour
     private bool b2 = false;
     private bool b3 = false;
     private bool b4 = false;
+    private bool b5 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,11 +70,12 @@ public class WolfPhaseManager : MonoBehaviour
             
         }
 
-        if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false)
+        if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false && b5 == false)
         {
             Debug.Log("Caught!");
             anim.SetTrigger("Caught");
             anim.SetTrigger("Caught");
+            b5 = true;
 
             //SceneManager.LoadScene("DeathScreen");
         }
