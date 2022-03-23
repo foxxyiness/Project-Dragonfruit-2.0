@@ -8,20 +8,23 @@ public class StealthScript : MonoBehaviour
     public float resetval = 1.5f;
     public float timer;
     public static StealthScript Instance;
-    public PlayerStateMachine PSM;
+    private PlayerStateMachine PSM;
+    private GameObject Player;
     public bool heartbeat = false;
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
         timer = resetval;
+        Player = GameObject.FindWithTag("Player");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (isHidden == false && resetval <= 1 && PSM.lightOn == false)
+        if (isHidden == false && resetval <= 1 && Player.GetComponent<PlayerStateMachine>().lightOn == false)
         {
             if (timer >= 0)
             {
@@ -36,7 +39,7 @@ public class StealthScript : MonoBehaviour
             }
 
         }
-        else if (isHidden == false && resetval <= 1 && PSM.lightOn == true)
+        else if (isHidden == false && resetval <= 1 && Player.GetComponent<PlayerStateMachine>().lightOn == false)
         {
             if (timer >= 0)
             {
@@ -60,7 +63,7 @@ public class StealthScript : MonoBehaviour
             }
             else
             {
-                HUDScript.Instance.stressLVL -= HUDScript.Instance.addAmount1;
+                HUDScript.Instance.stressLVL -= HUDScript.Instance.subAmount;
 
                 timer = resetval;
             }

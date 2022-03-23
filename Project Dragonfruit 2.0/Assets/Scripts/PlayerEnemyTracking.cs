@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerEnemyTracking : MonoBehaviour
 {
     public GameObject player;
+    public GameObject target;
     public GameObject body;
     public Vector3 CurrPos;
     public Vector3 BodyPos;
@@ -20,30 +21,31 @@ public class PlayerEnemyTracking : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         startspeed = speed;
-
+        target = player;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         BodyPos = body.transform.position;
         BodyPos.z = body.transform.position.z;
         BodyPos.y += yoffset;
-        CurrPos = player.transform.position;
+        CurrPos = target.transform.position;
         CurrPos.z = body.transform.position.z;
         if (PSM.isGrounded == true)
             CurrPos.y += yoffset;
         else
             CurrPos.y = body.transform.position.y;
         float steptoward = speed * Time.deltaTime;
-        if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
+        if ((target.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
             faceRight = !faceRight;
             Vector2 localScale = gameObject.transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-        else if ((body.transform.localPosition.x - CurrPos.x) > 0 && !faceRight)
+        else if ((target.transform.localPosition.x - CurrPos.x) > 0 && !faceRight)
         {
             faceRight = !faceRight;
             Vector2 localScale = gameObject.transform.localScale;
@@ -51,7 +53,7 @@ public class PlayerEnemyTracking : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        if (StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
+        if (StealthScript.Instance.isHidden == false && player.GetComponent<PlayerStateMachine>().isGrounded == true)
         { 
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }
