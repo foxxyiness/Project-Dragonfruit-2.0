@@ -53,7 +53,7 @@ public class PlayerGroundState : PlayerBaseState
         {
             SetSubState(_factory.LanternState());
         }
-        else if(_ctx.isSprintPressed && _ctx.isLightOn)
+        else if(_ctx.isSprintPressed && _ctx.isLightOn && _ctx.isMovementPressed)
         {
             SetSubState(_factory.LanternSprintState());
         }
