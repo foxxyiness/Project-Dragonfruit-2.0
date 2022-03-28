@@ -24,6 +24,10 @@ public class HUDScript : MonoBehaviour
         {
             stressLVL = 100;
         }
+        if (stressLVL < 0)
+        {
+            stressLVL = 0;
+        }
         Display1.text = stressLVL.ToString();
         
     }

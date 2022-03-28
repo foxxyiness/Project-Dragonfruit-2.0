@@ -55,16 +55,17 @@ public class TrapObject : MonoBehaviour
         if (coll.gameObject.tag == "Player" && isdestructible == true)
         {
             spriteRenderer.sprite = destroysprite;
+            
             HUDScript.Instance.stressLVL += pointsadded;
             if (activated == false)
             { 
                 activated = true;
             }
-            soundplay = true;
+            SoundManager.Instance.blist[4] = true;
         }
         if (coll.gameObject.tag == "Player" && isdestructible == false) //if the object is a bush
         {
-            soundplay = true;
+            SoundManager.Instance.blist[3] = true;
             HUDScript.Instance.stressLVL += pointsadded;
         }
 

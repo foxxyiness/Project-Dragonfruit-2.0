@@ -41,11 +41,11 @@ public class PlayerLanternState : PlayerBaseState
         {
             SwitchState(_factory.CrouchStateWalking());
         }
-        else if (_ctx.isLightOn && _ctx.isMovementPressed)
+        else if (_ctx.isLightOn && _ctx.isMovementPressed && !_ctx.isSprintPressed)
         {
             SwitchState(_factory.LanternWalkState());
         }
-        else if(_ctx.isLightOn && _ctx.isSprintPressed)
+        else if(_ctx.isLightOn && _ctx.isSprintPressed && _ctx.isMovementPressed)
         {
             SwitchState(_factory.LanternSprintState());
         }

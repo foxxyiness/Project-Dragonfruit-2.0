@@ -20,10 +20,7 @@ public class StealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer==0)
-        {
-            heartbeat = true;
-        }
+        
         if (isHidden == false && resetval <= 1 && PSM.lightOn == false)
         {
             if (timer >= 0)
@@ -54,6 +51,23 @@ public class StealthScript : MonoBehaviour
                 timer = resetval;
             }
         }
+        else if (isHidden == true)
+        {
+            if (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+
+            }
+            else
+            {
+                HUDScript.Instance.stressLVL -= HUDScript.Instance.addAmount1;
+
+                timer = resetval;
+            }
+
+        }
+
+
 
         else
         {
