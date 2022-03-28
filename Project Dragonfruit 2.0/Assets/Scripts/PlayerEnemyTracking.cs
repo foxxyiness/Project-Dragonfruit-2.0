@@ -46,14 +46,14 @@ public class PlayerEnemyTracking : MonoBehaviour
         else
             CurrPos.y = body.transform.position.y;
         float steptoward = speed * Time.deltaTime;
-        if ((target.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
+        if ((body.transform.localPosition.x - CurrPos.x) < 0 && faceRight)
         {
             faceRight = !faceRight;
             Vector2 localScale = gameObject.transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-        else if ((target.transform.localPosition.x - CurrPos.x) > 0 && !faceRight)
+        else if ((body.transform.localPosition.x - CurrPos.x) > 0 && !faceRight)
         {
             faceRight = !faceRight;
             Vector2 localScale = gameObject.transform.localScale;

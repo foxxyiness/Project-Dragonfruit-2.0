@@ -61,6 +61,7 @@ public class TrapObject : MonoBehaviour
                 activated = false;
             }
         }
+    }
         void OnTriggerStay2d(Collider2D coll)
         {
             if (coll.gameObject.tag == "Player" && isdestructible == false)
@@ -88,11 +89,10 @@ public class TrapObject : MonoBehaviour
             }
             if (coll.gameObject.tag == "Player" && isLight)
             {
-                spriteRenderer.sprite = mushroomOn;
-                HUDScript.Instance.stressLVL += pointsadded;
-                activated = true;
+            spriteRenderer.sprite = mushroomOn;
+            HUDScript.Instance.stressLVL += pointsadded;
+            activated = true;
             }
 
-        }
     }
 }

@@ -23,14 +23,14 @@ public class WolfPhaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HUDScript.Instance.stressLVL ==0f && HUDScript.Instance.stressLVL <= 25f && b4==false)
+        if(HUDScript.Instance.stressLVL ==0f && HUDScript.Instance.stressLVL < 25f && b4==false)
         {
             StealthScript.Instance.resetval = 2f;
             b4 = true;
             b1 = false;
             b2 = false;
             b3 = false;
-            Phase2WolfEntity.SetActive(b4);
+            Phase2WolfEntity.SetActive(!b4);
 
         }
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f && b1 == false)
@@ -55,6 +55,7 @@ public class WolfPhaseManager : MonoBehaviour
             Phase4WolfHitbox.SetActive(!b2);
             anim.Play("Entry");
             StealthScript.Instance.resetval = 1f;
+            SoundManager.Instance.blist[7] = true;
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
@@ -67,7 +68,8 @@ public class WolfPhaseManager : MonoBehaviour
             Phase3WolfEntity.SetActive(b3);
             Phase4WolfHitbox.SetActive(b3);
             StealthScript.Instance.resetval = 0.5f;
-            
+            SoundManager.Instance.blist[8] = true;
+
         }
 
         if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false && b5 == false)
@@ -76,7 +78,7 @@ public class WolfPhaseManager : MonoBehaviour
             anim.SetTrigger("Caught");
             anim.SetTrigger("Caught");
             b5 = true;
-
+            SoundManager.Instance.blist[6] = true;
             //SceneManager.LoadScene("DeathScreen");
         }
 
