@@ -15,7 +15,7 @@ C:/Users/Owner/UnityGames/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57576
+57956
 Successfully changed project path to: C:/Users/Owner/UnityGames/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 C:/Users/Owner/UnityGames/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Owner/UnityGames/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 108.95 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 122.54 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.7f1 (6bd9e232123f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,50 +63,50 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008805 seconds.
+Registered in 0.008401 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 109.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 114.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.628 seconds
+- Completed reload, in  0.638 seconds
 Domain Reload Profiling:
-	ReloadAssembly (629ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (638ms)
+		BeginReloadAssembly (79ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (472ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (477ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (95ms)
+			SetupTypeCache (97ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
+			RebuildScriptCaches (25ms)
 			SetupLoadedEditorAssemblies (303ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (110ms)
+				RefreshPlugins (114ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (133ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				ProcessInitializeOnLoadAttributes (130ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009732 seconds.
+Registered in 0.011566 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Owner\UnityGames\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Owner\UnityGames\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 120.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 109.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
   at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\Owner\UnityGames\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
@@ -126,43 +126,43 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.277 seconds
+- Completed reload, in  2.160 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2278ms)
-		BeginReloadAssembly (108ms)
+	ReloadAssembly (2160ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (2069ms)
-			LoadAssemblies (95ms)
+		EndReloadAssembly (1959ms)
+			LoadAssemblies (91ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (262ms)
+			SetupTypeCache (261ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (1619ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (1505ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (121ms)
-				BeforeProcessingInitializeOnLoad (135ms)
-				ProcessInitializeOnLoadAttributes (1268ms)
-				ProcessInitializeOnLoadMethodAttributes (75ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (1160ms)
+				ProcessInitializeOnLoadMethodAttributes (77ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5568 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 44 unused Assets / (0.7 MB). Loaded Objects now: 6021.
+Unloading 5570 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (0.7 MB). Loaded Objects now: 6023.
 Memory consumption went from 219.7 MB to 219.0 MB.
-Total: 11.631000 ms (FindLiveObjects: 0.465900 ms CreateObjectMapping: 0.498100 ms MarkObjects: 10.341500 ms  DeleteObjects: 0.324300 ms)
+Total: 13.374600 ms (FindLiveObjects: 0.553300 ms CreateObjectMapping: 0.474400 ms MarkObjects: 12.059000 ms  DeleteObjects: 0.286800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -177,31 +177,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 332365.713211 seconds.
-  path: Assets/Art/Trees
-  artifactKey: Guid(a2620e303631e734eb51042b87b86aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Trees using Guid(a2620e303631e734eb51042b87b86aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d11c103a495f68f974a86945abb16a') in 0.009107 seconds 
+  Time since last request: 332813.428367 seconds.
+  path: Assets/Art/DarkRed_Wolf_Sprite_Shadow.png
+  artifactKey: Guid(145c67124376be94bbccbc509c62b29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/DarkRed_Wolf_Sprite_Shadow.png using Guid(145c67124376be94bbccbc509c62b29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abdec7009c20cbf4bae1795a8b95b6d1') in 0.122193 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 46.359721 seconds.
-  path: Assets/Art/Trees/DarkRed_BiggerTree1.png
-  artifactKey: Guid(fae779ea63d38fa4086a804b0fc59ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Trees/DarkRed_BiggerTree1.png using Guid(fae779ea63d38fa4086a804b0fc59ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2bf041fe3ab901017385e3cab7ef7d') in 0.179538 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.061001 seconds.
-  path: Assets/Art/Trees/DarkRed_BiggerTree2.png
-  artifactKey: Guid(8d994993b0a8f994096ab6d367a1314f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Trees/DarkRed_BiggerTree2.png using Guid(8d994993b0a8f994096ab6d367a1314f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71ac448b9039052013fde38ee4bf68e') in 0.089840 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.966294 seconds.
-  path: Assets/Art/Trees/DarkRed_BiggerTree3.png
-  artifactKey: Guid(43c5e85cc6ae2dc46b17e78a964ef917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Trees/DarkRed_BiggerTree3.png using Guid(43c5e85cc6ae2dc46b17e78a964ef917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1ad248514f0c6c704b6e274ff429c04') in 0.077021 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.751532 seconds.
-  path: Assets/Art/Trees/DarkRed_BiggerTree4.png
-  artifactKey: Guid(978624afc8a8e954eab769f83114be54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Trees/DarkRed_BiggerTree4.png using Guid(978624afc8a8e954eab769f83114be54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e87e804729e0355a736423db47f56c') in 0.095216 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/new_DropHill.png
+  artifactKey: Guid(33bb0cbde4eebf24ebd1d1b22b21b417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/new_DropHill.png using Guid(33bb0cbde4eebf24ebd1d1b22b21b417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5127b995161f400fead32586d73e3122') in 0.032749 seconds 
