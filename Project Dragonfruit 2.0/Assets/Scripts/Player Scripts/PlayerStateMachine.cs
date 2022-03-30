@@ -46,9 +46,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isCrouchedPressed { get { return isCrouching; } }
     public bool isLightOn { get { return lightOn; } }
     public bool groundCheck{ get { return isGrounded; } }
-
-
-    private float soundtimer = 0f;
+    
     //Awake is called earlier than Start
     void Awake()
     {
@@ -72,10 +70,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(soundtimer < 0.2)
-        {
-            soundtimer += Time.deltaTime;
-        }
+
         Debug.Log("Current State " +_currentState);
         IsJumpPressed();
        // IsLanternJumpPressed();
@@ -85,12 +80,8 @@ public class PlayerStateMachine : MonoBehaviour
         IsLightPressed();
         _currentState.UpdateStates();
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if(isMoving && isGrounded && soundtimer > 0.2)
-        {
-            soundtimer = 0f;
-            SoundManager.Instance.blist[1] = true;
-        }
-    
+
+       
     }
 
      void OnCollisionEnter2D(Collision2D col)
@@ -98,6 +89,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            rb.velocity = Vector2.up * 0;
             Animator.SetBool("isJumping", false);
         }
         if (col.gameObject.tag == "Victory")
