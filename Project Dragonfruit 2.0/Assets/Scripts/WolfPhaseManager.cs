@@ -78,7 +78,7 @@ public class WolfPhaseManager : MonoBehaviour
             anim.SetTrigger("Caught");
             anim.SetTrigger("Caught");
             b5 = true;
-            SoundManager.Instance.blist[6] = true;
+
             //SceneManager.LoadScene("DeathScreen");
         }
 

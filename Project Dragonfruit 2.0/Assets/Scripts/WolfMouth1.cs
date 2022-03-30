@@ -33,6 +33,7 @@ public class WolfMouth1 : MonoBehaviour
         {
             caughtplr = true;
             Debug.Log("Player caught by hitbox");
+            SoundManager.Instance.blist[6] = true;
 
         }
     }
