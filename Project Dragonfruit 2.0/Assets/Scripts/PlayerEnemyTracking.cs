@@ -30,6 +30,10 @@ public class PlayerEnemyTracking : MonoBehaviour
         if (GameObject.FindWithTag("Goody"))
         { 
             target = GameObject.FindWithTag("Goody");
+            if(HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f)
+            {
+                WolfMouth1.Instance.distracted = true;
+            }
         }
         else
         {
@@ -60,11 +64,17 @@ public class PlayerEnemyTracking : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-
-        if (StealthScript.Instance.isHidden == false && player.GetComponent<PlayerStateMachine>().isGrounded == true)
-        { 
+        if (target == player && WolfMouth1.Instance.distracted == false)
+        { if (StealthScript.Instance.isHidden == false && player.GetComponent<PlayerStateMachine>().isGrounded == true)
+            {
+                body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+            } 
+        }
+        else if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && WolfMouth1.Instance.eat == false)
+        {
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }
+
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
         {
             speed += 0.001f * Time.deltaTime;

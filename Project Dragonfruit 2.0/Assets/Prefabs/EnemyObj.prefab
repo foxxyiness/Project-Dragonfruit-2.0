@@ -137,7 +137,6 @@ MonoBehaviour:
   faceRight: 0
   PSM: {fileID: 0}
   yoffset: 1
-  StopWatch: 0
 --- !u!114 &7348471456335730504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,8 +466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0c0686f8f9ba84096d07c30198e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodytagname: 
   caughtplr: 0
   kill: 0
+  eat: 0
   distracted: 0
   DisTarget: {fileID: 0}

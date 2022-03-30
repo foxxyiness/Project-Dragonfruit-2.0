@@ -14,6 +14,7 @@ public class WolfPhaseManager : MonoBehaviour
     private bool b3 = false;
     private bool b4 = false;
     private bool b5 = false;
+    private bool b6 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,8 +72,22 @@ public class WolfPhaseManager : MonoBehaviour
             SoundManager.Instance.blist[8] = true;
 
         }
+        if(GameObject.FindWithTag("Goody"))
+        {
+            if (b6 == false)
+            {
+                anim.SetTrigger("Sniffing");
+                anim.SetTrigger("Sniffing");
+                b6 = true;
+            }
+        }
+        else
+        {
+            b6 = false;
+        }
 
-        if (WolfMouth1.Instance.caughtplr == true && WolfMouth1.Instance.kill == false && b5 == false)
+
+        if (WolfMouth1.Instance.caughtplr == true && HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b5 == false)
         {
             Debug.Log("Caught!");
             anim.SetTrigger("Caught");

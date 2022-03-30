@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
         {
             if (blist[i] == true && i == 1)
             {
-                int h = Random.Range(0, 5);
+                int h = Random.Range(0, 4);
                 AS.clip = StepBank[h];
                 AS.Play();
                 blist[i] = false;
