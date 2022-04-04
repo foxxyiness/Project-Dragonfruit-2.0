@@ -188,6 +188,10 @@ MonoBehaviour:
   parent: {fileID: 172098775867566005}
   spriteRenderer: {fileID: 0}
   destroysprite: {fileID: 0}
+  isLight: 0
+  mushroomOn: {fileID: 0}
+  mushroomOff: {fileID: 0}
+  lightlength: 0
 --- !u!58 &172098775696764152
 CircleCollider2D:
   m_ObjectHideFlags: 0

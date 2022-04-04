@@ -10,12 +10,12 @@ public class TrapObject : MonoBehaviour
     private float buffertimer = 0;
     public float timedestroy = 2;
     public bool isdestructible;
+    public SpriteRenderer spriteRenderer;
 
     private bool activated = false;
     public GameObject parent;
     private bool soundplay;
     [Header("Only for Destructible Traps")]
-    public SpriteRenderer spriteRenderer;
     public Sprite destroysprite;
     [Header("Only for Mushroom Traps")]
     public bool isLight;
@@ -42,7 +42,7 @@ public class TrapObject : MonoBehaviour
                 Destroy(gameObject);//Ryan changed this
             }
         }
-        if (isdestructible == false && activated == true)
+        if (isdestructible == false && isLight == false && activated == true)
         {
             activated = false;
             while (buffertimer <= 2)
@@ -58,6 +58,7 @@ public class TrapObject : MonoBehaviour
             }
             if (timer >= lightlength)
             {
+                spriteRenderer.sprite = mushroomOn;
                 activated = false;
             }
         }
@@ -82,7 +83,7 @@ public class TrapObject : MonoBehaviour
                 }
                 SoundManager.Instance.blist[4] = true;
             }
-            if (coll.gameObject.tag == "Player" && isdestructible == false) //if the object is a bush
+            if (coll.gameObject.tag == "Player" && isdestructible == false && isLight == false) //if the object is a bush
             {
                 SoundManager.Instance.blist[3] = true;
                 HUDScript.Instance.stressLVL += pointsadded;

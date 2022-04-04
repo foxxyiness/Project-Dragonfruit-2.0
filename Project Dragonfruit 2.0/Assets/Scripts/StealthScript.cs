@@ -49,7 +49,7 @@ public class StealthScript : MonoBehaviour
             else
             {
                 HUDScript.Instance.stressLVL += HUDScript.Instance.addAmount2;
-                HUDScript.Instance.addAmount2 += 4;
+                HUDScript.Instance.addAmount2 += 1;
 
                 timer = resetval;
             }
@@ -68,6 +68,20 @@ public class StealthScript : MonoBehaviour
                 timer = resetval;
             }
 
+        }
+        else if(isHidden == false && Player.GetComponent<PlayerStateMachine>().lightOn == true)
+        {
+            if (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+
+            }
+            else
+            {
+                HUDScript.Instance.stressLVL += 1;
+
+                timer = resetval;
+            }
         }
 
 

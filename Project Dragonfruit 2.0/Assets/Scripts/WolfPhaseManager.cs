@@ -87,13 +87,15 @@ public class WolfPhaseManager : MonoBehaviour
         }
 
 
-        if (WolfMouth1.Instance.caughtplr == true && HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b5 == false)
+        if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b5 == false)
         {
-            Debug.Log("Caught!");
-            anim.SetTrigger("Caught");
-            anim.SetTrigger("Caught");
-            b5 = true;
-
+            if (WolfMouth1.Instance.caughtplr)
+            {
+                Debug.Log("Caught!");
+                anim.SetTrigger("Caught");
+                anim.SetTrigger("Caught");
+                b5 = true;
+            }
             //SceneManager.LoadScene("DeathScreen");
         }
 
