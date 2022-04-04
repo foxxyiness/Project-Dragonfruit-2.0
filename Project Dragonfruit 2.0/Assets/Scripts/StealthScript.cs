@@ -54,7 +54,7 @@ public class StealthScript : MonoBehaviour
                 timer = resetval;
             }
         }
-        else if (isHidden == true && Player.GetComponent<PlayerStateMachine>().lightOn == false)
+        else if (isHidden == true)
         {
             if (timer >= 0)
             {
