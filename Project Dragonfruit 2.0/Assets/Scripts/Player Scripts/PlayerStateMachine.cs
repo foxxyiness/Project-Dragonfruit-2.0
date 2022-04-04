@@ -36,6 +36,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprinting = false;
     public bool isMoving = false;
     public bool lightOn = false;
+    public bool canMove = true;
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -79,9 +80,12 @@ public class PlayerStateMachine : MonoBehaviour
         IsCrouchedPressed();
         IsLightPressed();
         _currentState.UpdateStates();
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-       
+        if (canMove)
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
+
+
     }
 
      void OnCollisionEnter2D(Collision2D col)
