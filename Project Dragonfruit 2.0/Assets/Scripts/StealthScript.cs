@@ -69,7 +69,7 @@ public class StealthScript : MonoBehaviour
             }
 
         }
-        else if(isHidden == false && Player.GetComponent<PlayerStateMachine>().lightOn == true)
+        else if(isHidden == false && (Player.GetComponent<PlayerStateMachine>().lightOn == true || Player.GetComponent<PlayerStateMachine>().isSprinting == true))
         {
             if (timer >= 0)
             {
