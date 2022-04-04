@@ -27,7 +27,7 @@ public class PlayerJumpState : PlayerBaseState
             
              // _ctx.StartCoroutine(JumpReverse());
             SwitchState(_factory.GroundState());
-            //_ctx.isJumpPressed = false;
+            _ctx.Animator.SetBool("isJumping", false);
         }
     }
     public override void InitializeSubStates() 
