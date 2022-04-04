@@ -215,12 +215,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c020b200254969544a923c5d86b37cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsadded: 5
+  pointsadded: 20
   timedestroy: 2
   isdestructible: 1
   parent: {fileID: 2724617611836338689}
   spriteRenderer: {fileID: 2724617610808241006}
   destroysprite: {fileID: 21300000, guid: e7d1ca26e2b8bd44b923afb00adfb859, type: 3}
+  isLight: 0
+  mushroomOn: {fileID: 0}
+  mushroomOff: {fileID: 0}
+  lightlength: 0
 --- !u!58 &2724617611466111308
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -234,9 +238,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.37772545}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.30678904
 --- !u!1 &2724617611836338689
 GameObject:
   m_ObjectHideFlags: 0

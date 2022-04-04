@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 5514538239999036049}
   - component: {fileID: 8551578800885693323}
   m_Layer: 0
-  m_Name: Red 2
+  m_Name: Red 2.0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   isHidden: 0
   resetval: 1.5
   timer: 0
-  PSM: {fileID: 0}
+  heartbeat: 0
 --- !u!114 &5514538239999036049
 MonoBehaviour:
   m_ObjectHideFlags: 0

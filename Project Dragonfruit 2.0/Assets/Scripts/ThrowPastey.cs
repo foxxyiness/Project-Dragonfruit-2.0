@@ -13,10 +13,11 @@ public class ThrowPastey : MonoBehaviour
     void Start()
     {
         RB2D = GetComponent<Rigidbody2D>();
+        PSM = GameObject.FindWithTag("Player").GetComponent<PlayerStateMachine>();
     }
     void Update()
     {
-        
+
         if (Thrown && (PSM.faceRight ==true))
         {
             var direction = -transform.right + Vector3.up;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerEnemyTracking : MonoBehaviour
 {
     public GameObject player;
+    public GameObject target;
     public GameObject body;
     public Vector3 CurrPos;
     public Vector3 BodyPos;
@@ -20,16 +21,29 @@ public class PlayerEnemyTracking : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         startspeed = speed;
-
+        target = player;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindWithTag("Goody"))
+        { 
+            target = GameObject.FindWithTag("Goody");
+            if(HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f)
+            {
+                WolfMouth1.Instance.distracted = true;
+            }
+        }
+        else
+        {
+            target = player;
+        }
+        
         BodyPos = body.transform.position;
         BodyPos.z = body.transform.position.z;
         BodyPos.y += yoffset;
-        CurrPos = player.transform.position;
+        CurrPos = target.transform.position;
         CurrPos.z = body.transform.position.z;
         if (PSM.isGrounded == true)
             CurrPos.y += yoffset;
@@ -50,14 +64,27 @@ public class PlayerEnemyTracking : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
-
-        if (StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
+        
+        if (target == player)
         { 
+            if (StealthScript.Instance.isHidden == false && player.GetComponent<PlayerStateMachine>().isGrounded == true && (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f) == false)
+            {
+                body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+            } 
+            else if(HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f)
+            {
+                if(WolfMouth1.Instance.distracted == false)
+                    body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+            }
+        }
+        else if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && WolfMouth1.Instance.eat == false)
+        {
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
         }
+
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
         {
-            speed += 0.001f * Time.deltaTime;
+            speed += 0.5f * Time.deltaTime;
 
         }
         if(HUDScript.Instance.stressLVL <= 75f)
