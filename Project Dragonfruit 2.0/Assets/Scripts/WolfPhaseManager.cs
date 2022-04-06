@@ -24,7 +24,7 @@ public class WolfPhaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HUDScript.Instance.stressLVL ==0f && HUDScript.Instance.stressLVL < 25f && b4==false)
+        if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL < 25f && b4 == false)
         {
             StealthScript.Instance.resetval = 2f;
             b4 = true;
