@@ -30311,7 +30311,7 @@ GameObject:
   - component: {fileID: 1551162444}
   m_Layer: 0
   m_Name: DeathBarrier
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30326,7 +30326,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -41555,7 +41555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551578800885693330, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.83762026
+      value: -0.84
       objectReference: {fileID: 0}
     - target: {fileID: 8551578800885693330, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
       propertyPath: m_LocalPosition.z

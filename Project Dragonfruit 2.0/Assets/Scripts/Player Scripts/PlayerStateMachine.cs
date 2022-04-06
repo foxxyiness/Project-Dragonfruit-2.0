@@ -100,6 +100,10 @@ public class PlayerStateMachine : MonoBehaviour
         {
             SceneManager.LoadScene("VictoryScreen");
         }
+        if (col.gameObject.tag == "Death")
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
    
 
