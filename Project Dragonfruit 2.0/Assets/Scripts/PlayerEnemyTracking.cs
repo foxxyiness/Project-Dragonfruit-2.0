@@ -14,6 +14,8 @@ public class PlayerEnemyTracking : MonoBehaviour
     public bool faceRight = false;
     public PlayerStateMachine PSM;
     public float yoffset = 1f;
+    public float xoffsetspawn = 7f;
+    public bool spawn;
 
     
     // Start is called before the first frame update
@@ -43,6 +45,19 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos = body.transform.position;
         BodyPos.z = body.transform.position.z;
         BodyPos.y += yoffset;
+        if (HUDScript.Instance.stressLVL >= 50f && HUDScript.Instance.stressLVL <= 100f)
+        {
+            if (spawn == false)
+            {
+                transform.position = new Vector3(transform.position.x-xoffsetspawn , transform.position.y, transform.position.z);
+                Debug.Log("Wolf pushed back");
+            }
+            spawn = true;
+        }
+        else if (HUDScript.Instance.stressLVL >= 0f && HUDScript.Instance.stressLVL < 50f)
+        {
+            spawn = false;
+        }
         CurrPos = target.transform.position;
         CurrPos.z = body.transform.position.z;
         if (PSM.isGrounded == true)
@@ -71,7 +86,7 @@ public class PlayerEnemyTracking : MonoBehaviour
             {
                 body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
             } 
-            else if(HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f)
+            else if(HUDScript.Instance.stressLVL >= 75f && HUDScript.Instance.stressLVL <= 100f)
             {
                 if(WolfMouth1.Instance.distracted == false)
                     body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
@@ -80,13 +95,23 @@ public class PlayerEnemyTracking : MonoBehaviour
         else if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && WolfMouth1.Instance.eat == false)
         {
             body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+            
         }
+        if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f)
+        {
+            speed = 2;
 
+        }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
         {
             speed += 0.5f * Time.deltaTime;
 
         }
+        
+        
+
+        
+        
         if(HUDScript.Instance.stressLVL <= 75f)
         {
             speed = startspeed;
