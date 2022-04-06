@@ -40,6 +40,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
+    Lantern_Decay lanternStuff;
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
@@ -99,6 +100,10 @@ public class PlayerStateMachine : MonoBehaviour
         if (col.gameObject.tag == "Victory")
         {
             SceneManager.LoadScene("VictoryScreen");
+        }
+        if (col.gameObject.tag == "Death")
+        {
+            SceneManager.LoadScene("DeathScreen");
         }
     }
    
@@ -163,6 +168,7 @@ public class PlayerStateMachine : MonoBehaviour
         {
             lightOn = true;
             latern.SetActive(true);
+            lanternStuff.LightBoy();
             Debug.Log("Light On");
         }
         else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
