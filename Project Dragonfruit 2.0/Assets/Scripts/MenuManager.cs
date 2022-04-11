@@ -7,9 +7,10 @@ using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
+    public int scenenum;
     public void playGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scenenum);
         Debug.Log("scene load");
     }
 

@@ -14,7 +14,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public bool faceRight = false;
     public PlayerStateMachine PSM;
     public float yoffset = 1f;
-    public float xoffsetspawn = 7f;
+    public float xoffsetspawn = 20f;
     public bool spawn;
 
     
