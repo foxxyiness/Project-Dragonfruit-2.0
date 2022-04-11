@@ -29,12 +29,11 @@ Transform:
   m_GameObject: {fileID: 7348471456335730496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.9461, y: -0.65, z: 4.6}
-  m_LocalScale: {x: 1.9846, y: 1.9846, z: 1}
+  m_LocalScale: {x: 7.438543, y: 7.438543, z: 3.748132}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7348471457386973757}
   - {fileID: 7348471457948938466}
-  - {fileID: 7348471457956089309}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,11 +128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4191405205786991683, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
+  target: {fileID: 0}
   body: {fileID: 7348471456335730496}
   CurrPos: {x: 0, y: 0, z: 0}
   BodyPos: {x: 0, y: 0, z: 0}
   speed: 1
   faceRight: 0
+  PSM: {fileID: 0}
+  yoffset: 1
 --- !u!114 &7348471456335730504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,10 +178,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7348471457386973756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.65, z: 1}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
   m_LocalScale: {x: 0.28405, y: 0.28405, z: 0.28405}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7348471457956089309}
   m_Father: {fileID: 7348471456335730501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -280,8 +283,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7348471457948938464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.63, z: 1}
-  m_LocalScale: {x: 0.16838345, y: 0.16838345, z: 0.16838345}
+  m_LocalPosition: {x: 0, y: -1.15, z: 0}
+  m_LocalScale: {x: 0.24950671, y: 0.24950671, z: 0.24950671}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7348471456335730501}
@@ -328,7 +331,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70d19ae9ca585ce43b39b974e0d0abba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 145c67124376be94bbccbc509c62b29e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -365,13 +368,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7348471457956089307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.54, y: -0.76, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9010754, y: -0.38725582, z: 0}
+  m_LocalScale: {x: 3.520507, y: 3.520507, z: 3.520507}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7348471456335730501}
-  m_RootOrder: 2
+  m_Father: {fileID: 7348471457386973757}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7348471457956089308
 SpriteRenderer:
@@ -463,8 +466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0c0686f8f9ba84096d07c30198e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodytagname: 
   caughtplr: 0
   kill: 0
+  eat: 0
   distracted: 0
   DisTarget: {fileID: 0}
+  Stopwatch: 0
