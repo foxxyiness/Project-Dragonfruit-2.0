@@ -234,7 +234,6 @@ GameObject:
   - component: {fileID: 8551578800885693352}
   - component: {fileID: 6649318091735898090}
   - component: {fileID: 5514538239999036049}
-  - component: {fileID: 8551578800885693323}
   m_Layer: 0
   m_Name: Red 2.0
   m_TagString: Player
@@ -403,29 +402,4 @@ MonoBehaviour:
   isSprinting: 0
   isMoving: 0
   lightOn: 0
---- !u!61 &8551578800885693323
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551578800885693328}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9675bfd5e5b5c5a42a2bfa1427615347, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0.06}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2.87}
-    newSize: {x: 2.5, y: 2.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.42, y: 2.8}
-  m_EdgeRadius: 0
+  canMove: 1
