@@ -15,6 +15,7 @@ public class WolfPhaseManager : MonoBehaviour
     private bool b4 = false;
     private bool b5 = false;
     private bool b6 = false;
+    private float timer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -102,7 +103,12 @@ public class WolfPhaseManager : MonoBehaviour
 
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Outwards"))
         {
+            
             WolfMouth1.Instance.kill = true;
+            while(timer<=5)
+            {
+                timer += Time.deltaTime;
+            }
             SceneManager.LoadScene("DeathScreen");
         }
     }

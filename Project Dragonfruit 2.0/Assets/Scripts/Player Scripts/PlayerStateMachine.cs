@@ -134,6 +134,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMoving = true;
+            SoundManager.Instance.blist[1] = true;
             Debug.Log("Movement Pressed");
         }
         else

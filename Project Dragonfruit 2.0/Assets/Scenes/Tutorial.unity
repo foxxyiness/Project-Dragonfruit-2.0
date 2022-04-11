@@ -1031,6 +1031,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5227771216523657385, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7117695799498896569, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
       propertyPath: m_Name
       value: SoundManagerObj
@@ -1079,6 +1083,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8378797686647809119, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
+      propertyPath: soundsource.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: d608331849e91d140a705884ca7dd702, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
 --- !u!1 &95501138
@@ -10668,6 +10676,11 @@ CapsuleCollider2D:
   m_Offset: {x: 1.7618257, y: -0.3051731}
   m_Size: {x: 3.3303716, y: 0.389652}
   m_Direction: 1
+--- !u!1 &676750623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8551578800885693328, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
+  m_PrefabInstance: {fileID: 2024029999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &685831926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5991730314001381309, guid: c363a21b0d771bf409be14eb6a881819, type: 3}
@@ -18815,12 +18828,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5514538239999036049, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
   m_PrefabInstance: {fileID: 2024029999}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 676750623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1200204472
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676750623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.07, y: 2.99}
+  m_Direction: 0
 --- !u!1 &1211334626
 GameObject:
   m_ObjectHideFlags: 0
