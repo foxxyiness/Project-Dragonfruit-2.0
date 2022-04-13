@@ -55,6 +55,7 @@ public class PlayerStateMachine : MonoBehaviour
         _states = new PlayerStateFactory(this);
         _currentState = _states.GroundState();
         _currentState.EnterState();
+        
 
         rb = GetComponent<Rigidbody2D>();
         
@@ -168,7 +169,6 @@ public class PlayerStateMachine : MonoBehaviour
         {
             lightOn = true;
             latern.SetActive(true);
-            lanternStuff.LightBoy();
             Debug.Log("Light On");
         }
         else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)

@@ -11,34 +11,40 @@ public class Lantern_Decay : MonoBehaviour
     public WaitForSeconds lanternRegin = new WaitForSeconds(.5f);
     public WaitForSeconds lanternDecay = new WaitForSeconds(1f);
     public static Lantern_Decay instance;
-    private void Awake()
+    public bool drainOverTime = true;
+    public float drainRate, rechargeRate, maxBrightness, minBrightness;
+
+    private void Update()
     {
-        instance = this;
+        LightBoy();
+        NightBoy();
     }
 
     public void LightBoy()
     {
-        StartCoroutine(LightDecay());
-    }
-    public IEnumerator LightDecay()
-    {
-        yield return new WaitForSeconds(5);
-        while (lantern.intensity >= 0.0f)
+       if(drainOverTime && PSM.isLightOn)
         {
-            lantern.intensity -= .1f;
-            yield return lanternDecay;
-        }
-        if (lantern.intensity <= 0.0f)
-            StartCoroutine(LightRegain());
-    }
-    public IEnumerator LightRegain()
-    {
-        yield return new WaitForSeconds(8);
-        while(lantern.intensity < maxIntensity)
-        {
-            lantern.intensity += .1f;
-            yield return lanternRegin;
+           lantern.intensity = Mathf.Clamp(lantern.intensity, minBrightness, maxBrightness);
+            if (lantern.intensity > minBrightness)
+            {
+                lantern.intensity -= Time.deltaTime * (drainRate / 1000);
+            }
+            else if(lantern.intensity < minBrightness)
+                lantern.intensity = minBrightness;
         }
     }
+    public void NightBoy()
+    {
+        if (drainOverTime && !PSM.isLightOn)
+        {
+            if (lantern.intensity < maxBrightness)
+            {
+                lantern.intensity += Time.deltaTime * (rechargeRate / 1000);
+            }
+            else if (lantern.intensity > maxBrightness)
+                lantern.intensity = maxBrightness;
+        }
+    }
+  
 }
 
