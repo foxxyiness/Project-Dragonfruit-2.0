@@ -141,11 +141,11 @@ public class PlayerStateMachine : MonoBehaviour
         else
             isMoving = false;
 
-        if (move.x < 0.0f && faceRight == false)
+        if (move.x < 0.0f && faceRight == false && Time.timeScale > 0)
         {
             FlipPlayer();
         }
-        else if (move.x > 0.0f && faceRight == true)
+        else if (move.x > 0.0f && faceRight == true && Time.timeScale > 0)
         {
             FlipPlayer();
         }
