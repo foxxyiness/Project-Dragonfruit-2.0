@@ -111,7 +111,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void IsJumpPressed()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && Time.timeScale > 0)
         {
             isJumpPressed = true;
             Debug.Log("Jump Pressed");
@@ -122,7 +122,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded && Time.timeScale > 0)
         {
             isSprinting = true;
         }
@@ -153,7 +153,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void IsCrouchedPressed()
     {
-        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded && Time.timeScale > 0)
         {
             isCrouching = true;
             Debug.Log("Crouched Pressed");
@@ -165,13 +165,13 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsLightPressed()
     {
-        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = true;
             latern.SetActive(true);
             Debug.Log("Light On");
         }
-        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = false;
             latern.SetActive(false);
