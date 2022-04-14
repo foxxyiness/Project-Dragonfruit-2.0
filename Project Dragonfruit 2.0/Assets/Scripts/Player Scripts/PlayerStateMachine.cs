@@ -40,7 +40,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
-    Lantern_Decay lanternStuff;
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
@@ -57,13 +56,7 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.EnterState();
         
 
-        rb = GetComponent<Rigidbody2D>();
-        
-    }
-    void Start()
-    {
-     
-       
+        rb = GetComponent<Rigidbody2D>();   
     }
     private void FixedUpdate()
     {

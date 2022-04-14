@@ -8,9 +8,6 @@ public class Lantern_Decay : MonoBehaviour
     float maxIntensity = 0.8f;
     public PlayerStateMachine PSM;
     public Light2D lantern;
-    public WaitForSeconds lanternRegin = new WaitForSeconds(.5f);
-    public WaitForSeconds lanternDecay = new WaitForSeconds(1f);
-    public static Lantern_Decay instance;
     public bool drainOverTime = true;
     public float drainRate, rechargeRate, maxBrightness, minBrightness;
 
