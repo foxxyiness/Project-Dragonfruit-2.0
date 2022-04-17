@@ -102,8 +102,9 @@ public class WolfPhaseManager : MonoBehaviour
                 anim.SetTrigger("Caught");
                 b5 = true;
                 GameObject.FindWithTag("Player").GetComponent<PlayerStateMachine>().canMove = false;
+                SceneManager.LoadScene("DeathCutscene");
             }
-            //SceneManager.LoadScene("DeathScreen");
+
         }
 
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Outwards"))
