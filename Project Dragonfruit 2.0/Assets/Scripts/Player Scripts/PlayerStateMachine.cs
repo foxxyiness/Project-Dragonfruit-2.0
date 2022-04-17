@@ -83,6 +83,10 @@ public class PlayerStateMachine : MonoBehaviour
 
         if (canMove)
             move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
         
 
 
@@ -120,7 +124,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded && canMove)
         {
             isSprinting = true;
         }
@@ -131,7 +135,7 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsMovementPressed()
     {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))&&canMove)
         {
             isMoving = true;
             SoundManager.Instance.blist[1] = true;

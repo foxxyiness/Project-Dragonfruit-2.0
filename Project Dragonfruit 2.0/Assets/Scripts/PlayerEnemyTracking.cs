@@ -88,8 +88,13 @@ public class PlayerEnemyTracking : MonoBehaviour
             } 
             else if(HUDScript.Instance.stressLVL >= 75f && HUDScript.Instance.stressLVL <= 100f)
             {
-                if(WolfMouth1.Instance.distracted == false)
+                if(WolfMouth1.Instance.distracted == false && WolfMouth1.Instance.caughtplr == false)
                     body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
+                
+                if (WolfMouth1.Instance.caughtplr == true)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                }
             }
         }
         else if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && WolfMouth1.Instance.eat == false)
@@ -108,6 +113,7 @@ public class PlayerEnemyTracking : MonoBehaviour
 
         }
         
+
         
 
         

@@ -1080,6 +1080,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8378797686647809119, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
+      propertyPath: soundsource.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: d608331849e91d140a705884ca7dd702, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271c8b0dd61d1434e9c95253fda6be59, type: 3}
 --- !u!1 &95501138
@@ -24948,6 +24952,14 @@ PrefabInstance:
       propertyPath: yoffset
       value: 2.21
       objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730503, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: xoffsetspawn
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730504, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: ParticlePrefab
+      value: 
+      objectReference: {fileID: 825486133107330789, guid: 5b06e8f5afbbbb844bce0f5a83c30a87, type: 3}
     - target: {fileID: 7348471457386973756, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -44658,7 +44670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551578800885693330, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 285.53
+      value: -46.88
       objectReference: {fileID: 0}
     - target: {fileID: 8551578800885693330, guid: 853cd763a167e3040b9ea4b72a669b9b, type: 3}
       propertyPath: m_LocalPosition.y

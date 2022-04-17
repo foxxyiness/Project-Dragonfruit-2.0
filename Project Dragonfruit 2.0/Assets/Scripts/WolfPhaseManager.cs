@@ -8,6 +8,7 @@ public class WolfPhaseManager : MonoBehaviour
     public GameObject Phase2WolfEntity;
     public GameObject Phase4WolfHitbox;
     public GameObject Phase3WolfEntity;
+    public GameObject ParticlePrefab;
     public Animator anim;
     private bool b1 = false;
     private bool b2 = false;
@@ -27,6 +28,8 @@ public class WolfPhaseManager : MonoBehaviour
     {
         if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL < 25f && b4 == false)
         {
+
+            
             StealthScript.Instance.resetval = 2f;
             b4 = true;
             b1 = false;
@@ -37,6 +40,7 @@ public class WolfPhaseManager : MonoBehaviour
         }
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f && b1 == false)
         {
+            Instantiate(ParticlePrefab, gameObject.transform.position, Quaternion.identity);
             b1 = true;
             b2 = false;
             b3 = false;
@@ -48,6 +52,7 @@ public class WolfPhaseManager : MonoBehaviour
         }
         if (HUDScript.Instance.stressLVL > 50f && HUDScript.Instance.stressLVL <= 75f && b2 == false)
         {
+            Instantiate(ParticlePrefab, gameObject.transform.position, Quaternion.identity);
             b1 = false;
             b2 = true;
             b3 = false;
@@ -88,9 +93,9 @@ public class WolfPhaseManager : MonoBehaviour
         }
 
 
-        if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b5 == false)
+        if (HUDScript.Instance.stressLVL >= 75f && HUDScript.Instance.stressLVL <= 100f && b5 == false)
         {
-            if (WolfMouth1.Instance.caughtplr)
+            if (WolfMouth1.Instance.caughtplr == true)
             {
                 Debug.Log("Caught!");
                 anim.SetTrigger("Caught");
