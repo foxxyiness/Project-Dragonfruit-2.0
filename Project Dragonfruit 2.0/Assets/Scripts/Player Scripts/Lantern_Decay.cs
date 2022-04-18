@@ -8,8 +8,15 @@ public class Lantern_Decay : MonoBehaviour
     float maxIntensity = 0.8f;
     public PlayerStateMachine PSM;
     public Light2D lantern;
-    public bool drainOverTime = true;
-    public float drainRate, rechargeRate, maxBrightness, minBrightness;
+    private bool drainOverTime = true;
+    private float drainRate, rechargeRate, maxBrightness, minBrightness;
+    private void Start()
+    {
+        drainRate = 50f;
+        rechargeRate = 100.0f;
+        maxBrightness = 0.8f;
+        minBrightness = 0.01f;
+    }
 
     private void Update()
     {
@@ -17,7 +24,7 @@ public class Lantern_Decay : MonoBehaviour
         NightBoy();
     }
 
-    public void LightBoy()
+    private void LightBoy()
     {
        if(drainOverTime && PSM.isLightOn)
         {
@@ -27,10 +34,14 @@ public class Lantern_Decay : MonoBehaviour
                 lantern.intensity -= Time.deltaTime * (drainRate / 1000);
             }
             else if(lantern.intensity < minBrightness)
+            {
                 lantern.intensity = minBrightness;
+            }
+                
+                
         }
     }
-    public void NightBoy()
+    private void NightBoy()
     {
         if (drainOverTime && !PSM.isLightOn)
         {

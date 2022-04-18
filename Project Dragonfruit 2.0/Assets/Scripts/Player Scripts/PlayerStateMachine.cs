@@ -41,6 +41,7 @@ public class PlayerStateMachine : MonoBehaviour
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
 
+
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
@@ -158,13 +159,13 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsLightPressed()
     {
-        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
+        if (!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = true;
             latern.SetActive(true);
             Debug.Log("Light On");
         }
-        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
+        else if (lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = false;
             latern.SetActive(false);

@@ -29395,6 +29395,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1458707632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7284358284401069502, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+  m_PrefabInstance: {fileID: 1973715150}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458707626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0d4cddf8e880d45b4b147a41052e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461340131
 GameObject:
   m_ObjectHideFlags: 0
@@ -43277,6 +43288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 2995085119715367067, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+      propertyPath: lantern
+      value: 
+      objectReference: {fileID: 1458707632}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
 --- !u!1 &1974086417
