@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WolfMouth1 : MonoBehaviour
 {
@@ -42,9 +43,11 @@ public class WolfMouth1 : MonoBehaviour
         }
         if (coll.gameObject.tag == "Player" && distracted == false && StealthScript.Instance.isHidden == false)
         {
+            SceneManager.LoadScene("DeathCutscene");
             caughtplr = true;
             Debug.Log("Player caught by hitbox");
-            SoundManager.Instance.blist[6] = true;
+
+            //SoundManager.Instance.blist[6] = true;
         }
     }
 }
