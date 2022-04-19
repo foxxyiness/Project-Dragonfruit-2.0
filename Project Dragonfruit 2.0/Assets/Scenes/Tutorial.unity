@@ -18614,6 +18614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 2995085119715367067, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 831135195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
 --- !u!1 &726922568
@@ -20372,6 +20376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &831135195 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6490579987246709994, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+  m_PrefabInstance: {fileID: 721687617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &835470591
 PrefabInstance:
   m_ObjectHideFlags: 0
