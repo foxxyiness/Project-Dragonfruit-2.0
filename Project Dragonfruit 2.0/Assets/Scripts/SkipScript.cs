@@ -15,7 +15,14 @@ public class SkipScript : MonoBehaviour
         }
         else if(Input.anyKeyDown)
         {
-            skipText.SetActive(true);
+            StartCoroutine(skipAble());
         }
+    }
+
+    IEnumerator skipAble()
+    {
+        skipText.SetActive(true);
+        yield return new WaitForSeconds(7);
+        skipText.SetActive(false);
     }
 }
