@@ -29,7 +29,10 @@ public class WolfPhaseManager : MonoBehaviour
         if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL < 25f && b4 == false)
         {
 
-            
+            if(b1)
+            {
+                Instantiate(ParticlePrefab, gameObject.transform.position, Quaternion.identity);
+            }
             StealthScript.Instance.resetval = 2f;
             b4 = true;
             b1 = false;

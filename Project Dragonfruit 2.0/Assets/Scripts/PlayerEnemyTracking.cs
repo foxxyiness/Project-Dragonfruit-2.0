@@ -54,7 +54,7 @@ public class PlayerEnemyTracking : MonoBehaviour
             }
             spawn = true;
         }
-        else if (HUDScript.Instance.stressLVL >= 0f && HUDScript.Instance.stressLVL < 50f)
+        else if (HUDScript.Instance.stressLVL >= 0f && HUDScript.Instance.stressLVL < 25f)
         {
             spawn = false;
         }
@@ -82,7 +82,7 @@ public class PlayerEnemyTracking : MonoBehaviour
         
         if (target == player)
         { 
-            if (StealthScript.Instance.isHidden == false && player.GetComponent<PlayerStateMachine>().isGrounded == true && (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f) == false)
+            if (StealthScript.Instance.isHidden == false && (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f) == false)
             {
                 body.transform.localPosition = Vector3.MoveTowards(body.transform.localPosition, CurrPos, steptoward);
             } 
