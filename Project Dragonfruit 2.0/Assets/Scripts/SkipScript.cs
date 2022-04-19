@@ -13,7 +13,7 @@ public class SkipScript : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
-        else
+        else if(Input.anyKeyDown)
         {
             skipText.SetActive(true);
         }
