@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     public void playGame()
     {
         if (loadenabled == false)
-        { 
+        {
             SceneManager.LoadScene(scenenum);
         }
         else
@@ -32,12 +32,12 @@ public class MenuManager : MonoBehaviour
 
         Debug.Log("quit");
     }
-    IEnumerator LoadAsync ()
+    IEnumerator LoadAsync()
     {
         AsyncOperation loadop = SceneManager.LoadSceneAsync(scenenum);
 
         loadscreen.SetActive(true);
-        while(!loadop.isDone)
+        while (!loadop.isDone)
         {
             float progress = Mathf.Clamp01(loadop.progress / .9f);
             slid.value = progress;

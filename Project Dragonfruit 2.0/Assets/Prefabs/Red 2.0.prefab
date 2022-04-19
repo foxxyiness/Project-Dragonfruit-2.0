@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 8551578800885693352}
   - component: {fileID: 6649318091735898090}
   - component: {fileID: 5514538239999036049}
+  - component: {fileID: 4540773428207775456}
   m_Layer: 0
   m_Name: Red 2.0
   m_TagString: Player
@@ -403,3 +404,19 @@ MonoBehaviour:
   isMoving: 0
   lightOn: 0
   canMove: 1
+--- !u!70 &4540773428207775456
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8551578800885693328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.07, y: 2.99}
+  m_Direction: 0
