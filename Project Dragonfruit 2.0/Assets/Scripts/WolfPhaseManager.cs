@@ -69,6 +69,7 @@ public class WolfPhaseManager : MonoBehaviour
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && b3 == false)
         {
+
             b1 = false;
             b2 = false;
             b3 = true;

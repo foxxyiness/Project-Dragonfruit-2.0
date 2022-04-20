@@ -7,6 +7,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public GameObject player;
     public GameObject target;
     public GameObject body;
+    public GameObject ParticlePrefab;
     public Vector3 CurrPos;
     public Vector3 BodyPos;
     public float speed = 1f;
@@ -16,6 +17,7 @@ public class PlayerEnemyTracking : MonoBehaviour
     public float yoffset = 1f;
     public float xoffsetspawn = 20f;
     public bool spawn;
+    public float stomping = 0f;
 
     
     // Start is called before the first frame update
@@ -45,10 +47,11 @@ public class PlayerEnemyTracking : MonoBehaviour
         BodyPos = body.transform.position;
         BodyPos.z = body.transform.position.z;
         BodyPos.y += yoffset;
-        if (HUDScript.Instance.stressLVL >= 50f && HUDScript.Instance.stressLVL <= 100f)
+        if (HUDScript.Instance.stressLVL >= 75f && HUDScript.Instance.stressLVL <= 100f)
         {
             if (spawn == false)
             {
+                Instantiate(ParticlePrefab, gameObject.transform.position, Quaternion.identity);
                 transform.position = new Vector3(transform.position.x-xoffsetspawn , transform.position.y, transform.position.z);
                 Debug.Log("Wolf pushed back");
             }
@@ -105,6 +108,7 @@ public class PlayerEnemyTracking : MonoBehaviour
         if (HUDScript.Instance.stressLVL > 25f && HUDScript.Instance.stressLVL <= 50f)
         {
             speed = 2;
+            stomping = 0;
 
         }
         if (HUDScript.Instance.stressLVL > 75f && HUDScript.Instance.stressLVL <= 100f && StealthScript.Instance.isHidden == false && PSM.isGrounded == true)
@@ -113,12 +117,30 @@ public class PlayerEnemyTracking : MonoBehaviour
 
         }
         
+        if (HUDScript.Instance.stressLVL > 50f && HUDScript.Instance.stressLVL <= 100f)
+        {
+            if (stomping == 0)
+            {
+                SoundManager.Instance.blist[5] = true;
+            }
 
-        
+            if (stomping <= 6.905f)
+            {
+                stomping += Time.deltaTime;
+            }
+            else if (stomping >= 53.808f)
+            {
+                stomping = 0;
+            }
 
-        
-        
-        if(HUDScript.Instance.stressLVL <= 75f)
+        }
+
+
+
+
+
+
+        if (HUDScript.Instance.stressLVL <= 75f)
         {
             speed = startspeed;
         }
