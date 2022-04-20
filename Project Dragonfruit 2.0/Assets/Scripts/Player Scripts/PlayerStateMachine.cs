@@ -41,6 +41,7 @@ public class PlayerStateMachine : MonoBehaviour
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
 
+
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
     public bool isMovementPressed { get { return isMoving; } }
@@ -54,14 +55,9 @@ public class PlayerStateMachine : MonoBehaviour
         _states = new PlayerStateFactory(this);
         _currentState = _states.GroundState();
         _currentState.EnterState();
-
-        rb = GetComponent<Rigidbody2D>();
         
-    }
-    void Start()
-    {
-     
-       
+
+        rb = GetComponent<Rigidbody2D>();   
     }
     private void FixedUpdate()
     {
@@ -83,10 +79,6 @@ public class PlayerStateMachine : MonoBehaviour
 
         if (canMove)
             move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        else
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-        }
         
 
 
@@ -113,7 +105,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void IsJumpPressed()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && Time.timeScale > 0)
         {
             isJumpPressed = true;
             Debug.Log("Jump Pressed");
@@ -124,7 +116,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded && canMove)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded && Time.timeScale > 0)
         {
             isSprinting = true;
         }
@@ -135,20 +127,19 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsMovementPressed()
     {
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))&&canMove)
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             isMoving = true;
-            SoundManager.Instance.blist[1] = true;
             Debug.Log("Movement Pressed");
         }
         else
             isMoving = false;
 
-        if (move.x < 0.0f && faceRight == false)
+        if (move.x < 0.0f && faceRight == false && Time.timeScale > 0)
         {
             FlipPlayer();
         }
-        else if (move.x > 0.0f && faceRight == true)
+        else if (move.x > 0.0f && faceRight == true && Time.timeScale > 0)
         {
             FlipPlayer();
         }
@@ -156,7 +147,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void IsCrouchedPressed()
     {
-        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded && Time.timeScale > 0)
         {
             isCrouching = true;
             Debug.Log("Crouched Pressed");
@@ -168,13 +159,13 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsLightPressed()
     {
-        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        if (!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = true;
             latern.SetActive(true);
             Debug.Log("Light On");
         }
-        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        else if (lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = false;
             latern.SetActive(false);
