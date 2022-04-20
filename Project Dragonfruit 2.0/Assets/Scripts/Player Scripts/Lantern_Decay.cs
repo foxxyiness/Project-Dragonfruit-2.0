@@ -5,7 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class Lantern_Decay : MonoBehaviour
 {
-    float maxIntensity = 0.8f;
     public PlayerStateMachine PSM;
     public Light2D lantern;
     public GameObject lanternText;
@@ -37,10 +36,12 @@ public class Lantern_Decay : MonoBehaviour
             else if(lantern.intensity <= minBrightness)
             {
                 lantern.intensity = minBrightness;
-                StartCoroutine(suggestedLight());
+                if (!Input.GetKeyDown(KeyCode.F))
+                {
+                    StartCoroutine(suggestedLight());
+                }
+                
             }
-                
-                
         }
     }
     private void NightBoy()
@@ -61,14 +62,11 @@ public class Lantern_Decay : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         lanternText.SetActive(true);
-        if (!PSM.isLightOn)
+        if (Input.GetKeyDown(KeyCode.F))
         {
+            lanternText.SetActive(false);
             StopCoroutine(suggestedLight());
-            NightBoy();
         }
-    
     }
-
-  
 }
 
