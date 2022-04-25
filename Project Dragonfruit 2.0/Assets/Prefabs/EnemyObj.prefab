@@ -130,12 +130,15 @@ MonoBehaviour:
   player: {fileID: 4191405205786991683, guid: dfc0d12c1d8812242baa928362b942ca, type: 3}
   target: {fileID: 0}
   body: {fileID: 7348471456335730496}
+  ParticlePrefab: {fileID: 0}
   CurrPos: {x: 0, y: 0, z: 0}
   BodyPos: {x: 0, y: 0, z: 0}
   speed: 1
   faceRight: 0
   PSM: {fileID: 0}
   yoffset: 1
+  xoffsetspawn: 20
+  spawn: 0
 --- !u!114 &7348471456335730504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +154,7 @@ MonoBehaviour:
   Phase2WolfEntity: {fileID: 7348471457948938464}
   Phase4WolfHitbox: {fileID: 7348471457956089307}
   Phase3WolfEntity: {fileID: 7348471457386973756}
+  ParticlePrefab: {fileID: 825486133107330789, guid: 5b06e8f5afbbbb844bce0f5a83c30a87, type: 3}
   anim: {fileID: 7348471457386973759}
 --- !u!1 &7348471457386973756
 GameObject:
