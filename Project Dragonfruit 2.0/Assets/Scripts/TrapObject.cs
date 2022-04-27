@@ -11,6 +11,7 @@ public class TrapObject : MonoBehaviour
     public float timedestroy = 2;
     public bool isdestructible;
     public SpriteRenderer spriteRenderer;
+    public GameObject particleEffect;
 
     private bool activated = false;
     public GameObject parent;
@@ -80,6 +81,7 @@ public class TrapObject : MonoBehaviour
                 if (activated == false)
                 {
                     activated = true;
+                Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity);
                 }
                 SoundManager.Instance.blist[4] = true;
             }
