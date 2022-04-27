@@ -48,7 +48,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isCrouchedPressed { get { return isCrouching; } }
     public bool isLightOn { get { return lightOn; } }
     public bool groundCheck{ get { return isGrounded; } }
-    
+    private float stomp = 0f;
     //Awake is called earlier than Start
     void Awake()
     {
@@ -80,6 +80,19 @@ public class PlayerStateMachine : MonoBehaviour
         if (canMove)
             move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         
+        if(stomp >= 0.2f)
+        {
+            stomp = 0;
+            SoundManager.Instance.blist[1] = true;
+        }
+        if (isMoving && isGrounded &&stomp < 0.2f)
+        {
+            stomp += Time.deltaTime;
+        }
+        else if (isMoving == false || isGrounded == false)
+        {
+            stomp = 0;
+        }
 
 
     }
