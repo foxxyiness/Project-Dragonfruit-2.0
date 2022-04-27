@@ -301,3 +301,53 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+The file 'UserSettings/EditorUserSettings.asset' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+Trying to reload asset but can't find object on disk
+Registering precompiled user dll's ...
+Registered in 0.016021 seconds.
+Begin MonoManager ReloadAssembly
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+=================================================================
+Received signal SIGSEGV
+Obtained 27 stack frames
+0x00007ff67a169bab (Unity) Transfer_SimpleNativeClass<StreamedBinaryWrite,AnimationCurveTpl<float>,0>
+0x00007ff67a0c1516 (Unity) ExecuteSerializationCommands<ConfigSettingsRead>
+0x00007ff67a168622 (Unity) Transfer_ManagedObject<StreamedBinaryWrite,0>
+0x00007ff67a0c1516 (Unity) ExecuteSerializationCommands<ConfigSettingsRead>
+0x00007ff67a168622 (Unity) Transfer_ManagedObject<StreamedBinaryWrite,0>
+0x00007ff67a0c1636 (Unity) ExecuteSerializationCommands<JSONRead>
+0x00007ff67a0d95a8 (Unity) <lambda_23502d5cf47c99f01792cd87488ce116>::operator()
+0x00007ff67a0d4805 (Unity) TransferScriptingObject<StreamedBinaryWrite>
+0x00007ff67a0dee16 (Unity) SerializableManagedRefBackupGenerator::ExtractBackupFromInstance
+0x00007ff67a0dbb8e (Unity) MonoBehaviour::BackupAndDeflateManagedReferences
+0x00007ff67a188083 (Unity) SerializableManagedRefsUtilities::BackupAndDeflateAll
+0x00007ff67a0dc052 (Unity) MonoManager::BeginReloadAssembly
+0x00007ff67a0e5c07 (Unity) MonoManager::ReloadAssembly
+0x00007ff67affbf22 (Unity) LoadDomainAndUserAssemblies
+0x00007ff67affc654 (Unity) LoadUserAssemblies
+0x00007ff67b48ba58 (Unity) <lambda_c8aac203af85da22e031a8e6d38250eb>::operator()
+0x00007ff67b520412 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff67b52269d (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff67b525abe (Unity) asio::io_service::run
+0x00007ff67b51e8b1 (Unity) IOService::Run
+0x00007ff67b4b7fa8 (Unity) RunAssetImportWorkerClientV2
+0x00007ff67b4b807b (Unity) RunAssetImporterV2
+0x00007ff67acff690 (Unity) Application::InitializeProject
+0x00007ff67b14a7d8 (Unity) WinMain
+0x00007ff67c45aaa2 (Unity) __scrt_common_main_seh
+0x00007ff89f637034 (KERNEL32) BaseThreadInitThunk
+0x00007ff8a0462651 (ntdll) RtlUserThreadStart
+
