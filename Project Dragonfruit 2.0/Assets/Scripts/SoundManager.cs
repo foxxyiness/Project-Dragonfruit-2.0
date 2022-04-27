@@ -35,7 +35,7 @@ public class SoundManager : MonoBehaviour
                 AS.PlayOneShot(soundsource[i],1f);
                 blist[i] = false;
                 Debug.Log("Sound " + i + " Played");
-            }
+            } 
         }
 
     }
