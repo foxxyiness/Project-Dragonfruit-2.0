@@ -23,13 +23,13 @@ public class SoundManager : MonoBehaviour
         
         for (int i = 0; i < soundsource.Length; i++)
         {
-            if (blist[i] == true && i == 1)
+            /*if (blist[i] == true && i == 1)
             {
                 h = Random.Range(0, 4);
                 AS.PlayOneShot(StepBank[h],1f);
                 blist[1] = false;
                 Debug.Log("Step Sound " + h + " Played");
-            }
+            } */
             if (blist[i] == true && i != 1)
             {
                 AS.PlayOneShot(soundsource[i],1f);
