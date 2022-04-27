@@ -44,6 +44,7 @@ public class HeartScript : MonoBehaviour
             HeartSpeed = 2f;
             image.color = new Color(1f, 1f, 1f, 1f);
         }
+
         anim.SetFloat("Speed", HeartSpeed);
         timer += Time.deltaTime;
         if(timer >= buffertime)

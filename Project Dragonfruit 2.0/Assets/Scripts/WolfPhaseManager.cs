@@ -9,6 +9,7 @@ public class WolfPhaseManager : MonoBehaviour
     public GameObject Phase4WolfHitbox;
     public GameObject Phase3WolfEntity;
     public GameObject ParticlePrefab;
+    public AudioSource finalPhase;
     public Animator anim;
     private bool b1 = false;
     private bool b2 = false;
@@ -26,6 +27,10 @@ public class WolfPhaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(HUDScript.Instance.stressLVL <=75f )
+        {
+            finalPhase.Stop();
+        }
         if(HUDScript.Instance.stressLVL >=0f && HUDScript.Instance.stressLVL < 25f && b4 == false)
         {
 
@@ -80,7 +85,7 @@ public class WolfPhaseManager : MonoBehaviour
             Phase4WolfHitbox.SetActive(b3);
             StealthScript.Instance.resetval = 0.5f;
             SoundManager.Instance.blist[8] = true;
-
+            finalPhase.Play();
         }
         if(GameObject.FindWithTag("Goody"))
         {
