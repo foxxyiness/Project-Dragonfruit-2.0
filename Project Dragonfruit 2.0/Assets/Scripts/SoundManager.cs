@@ -26,8 +26,7 @@ public class SoundManager : MonoBehaviour
             if (blist[i] == true && i == 1)
             {
                 h = Random.Range(0, 4);
-                AS.clip = StepBank[h];
-                AS.Play();
+                AS.PlayOneShot(StepBank[h],1f);
                 blist[1] = false;
                 Debug.Log("Step Sound " + h + " Played");
             }
