@@ -12,6 +12,7 @@ public class PlayerLanternSprintState : PlayerBaseState
         _ctx.Animator.SetBool("LanternOn", true);
         _ctx.Animator.SetBool("isIdle", false);
         _ctx.Animator.SetBool("isSprinting", true);
+        _ctx.Animator.SetBool("isWalking", true);
     }
     public override void UpdateState()
     {

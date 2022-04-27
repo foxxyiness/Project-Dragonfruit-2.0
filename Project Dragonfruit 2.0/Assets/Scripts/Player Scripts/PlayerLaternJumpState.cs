@@ -26,7 +26,7 @@ public class PlayerLanternJumpState : PlayerBaseState
 
             // _ctx.StartCoroutine(JumpReverse());
             SwitchState(_factory.GroundState());
-            //_ctx.isJumpPressed = false;
+            _ctx.Animator.SetBool("isJumping", false);
         }
     }
     public override void InitializeSubStates()
@@ -47,7 +47,7 @@ public class PlayerLanternJumpState : PlayerBaseState
 
     void Jump()
     {
-        Debug.Log("JUMP");
+        Debug.Log("LANTERN JUMP");
         _ctx.rb.AddForce(Vector2.up * _ctx.powerJump, ForceMode2D.Impulse);
         _ctx.isGrounded = false;
         _ctx.Animator.SetBool("LanternOn", true);

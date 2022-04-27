@@ -36,9 +36,11 @@ public class PlayerStateMachine : MonoBehaviour
     public bool isSprinting = false;
     public bool isMoving = false;
     public bool lightOn = false;
+    public bool canMove = true;
 
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
+
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public bool isSprintPressed { get { return isSprinting; } }
@@ -53,14 +55,9 @@ public class PlayerStateMachine : MonoBehaviour
         _states = new PlayerStateFactory(this);
         _currentState = _states.GroundState();
         _currentState.EnterState();
-
-        rb = GetComponent<Rigidbody2D>();
         
-    }
-    void Start()
-    {
-     
-       
+
+        rb = GetComponent<Rigidbody2D>();   
     }
     private void FixedUpdate()
     {
@@ -70,6 +67,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Debug.Log("Current State " +_currentState);
         IsJumpPressed();
        // IsLanternJumpPressed();
@@ -78,8 +76,12 @@ public class PlayerStateMachine : MonoBehaviour
         IsCrouchedPressed();
         IsLightPressed();
         _currentState.UpdateStates();
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-    
+
+        if (canMove)
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
+
+
     }
 
      void OnCollisionEnter2D(Collision2D col)
@@ -87,18 +89,23 @@ public class PlayerStateMachine : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            rb.velocity = Vector2.up * 0;
             Animator.SetBool("isJumping", false);
         }
         if (col.gameObject.tag == "Victory")
         {
             SceneManager.LoadScene("VictoryScreen");
         }
+        if (col.gameObject.tag == "Death")
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
    
 
     void IsJumpPressed()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && Time.timeScale > 0)
         {
             isJumpPressed = true;
             Debug.Log("Jump Pressed");
@@ -109,7 +116,7 @@ public class PlayerStateMachine : MonoBehaviour
     void IsSprintPressed()
     {
 
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded && Time.timeScale > 0)
         {
             isSprinting = true;
         }
@@ -128,11 +135,11 @@ public class PlayerStateMachine : MonoBehaviour
         else
             isMoving = false;
 
-        if (move.x < 0.0f && faceRight == false)
+        if (move.x < 0.0f && faceRight == false && Time.timeScale > 0)
         {
             FlipPlayer();
         }
-        else if (move.x > 0.0f && faceRight == true)
+        else if (move.x > 0.0f && faceRight == true && Time.timeScale > 0)
         {
             FlipPlayer();
         }
@@ -140,7 +147,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void IsCrouchedPressed()
     {
-        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded && Time.timeScale > 0)
         {
             isCrouching = true;
             Debug.Log("Crouched Pressed");
@@ -152,13 +159,13 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void IsLightPressed()
     {
-        if(!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        if (!lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = true;
             latern.SetActive(true);
             Debug.Log("Light On");
         }
-        else if(lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching)
+        else if (lightOn && Input.GetKeyDown(KeyCode.F) && isGrounded && !isCrouching && Time.timeScale > 0)
         {
             lightOn = false;
             latern.SetActive(false);

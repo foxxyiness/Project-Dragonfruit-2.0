@@ -31,9 +31,13 @@ public class PlayerSprintState : PlayerBaseState
         {
             SwitchState(_factory.OffState());
         } 
-        else if (_ctx.isMovementPressed && _ctx.isLightOn)
+        else if (_ctx.isSprintPressed && _ctx.isLightOn && _ctx.isMovementPressed)
         {
             SwitchState(_factory.LanternSprintState());
+        }
+        else if(_ctx.isMovementPressed && _ctx.isLightOn && !_ctx.isSprintPressed)
+        {
+            SwitchState(_factory.LanternWalkState());
         }
     }
     public override void InitializeSubStates() { }
