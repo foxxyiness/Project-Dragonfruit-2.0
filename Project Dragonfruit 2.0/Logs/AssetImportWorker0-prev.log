@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.7f1 (6bd9e232123f) revision 7068130'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit Enterprise' Language: 'en' Physical Memory: 16216 MB
+OS: 'Windows 10  (10.0.19042) 64bit Enterprise' Language: 'en' Physical Memory: 16235 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.2.7f1\Editor\Unity.exe
+C:\Program Files\Unity 2021.2.7f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/rnowak/Documents/GameDev/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
+C:/Users/LFacione/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61563
-Successfully changed project path to: C:/Users/rnowak/Documents/GameDev/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
-C:/Users/rnowak/Documents/GameDev/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
+52716
+Successfully changed project path to: C:/Users/LFacione/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
+C:/Users/LFacione/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,78 +47,78 @@ C:/Users/rnowak/Documents/GameDev/Project-Dragonfruit-2.0/Project Dragonfruit 2.
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 199.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 125.49 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.7f1 (6bd9e232123f)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/rnowak/Documents/GameDev/Project-Dragonfruit-2.0/Project Dragonfruit 2.0/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.2.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/LFacione/Documents/GitHub/Project-Dragonfruit-2.0/Project Dragonfruit 2.0/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
-    Vendor:   Intel
-    VRAM:     8108 MB
-    Driver:   27.20.100.8681
+    Renderer: NVIDIA Quadro P2000 (ID=0x1cba)
+    Vendor:   NVIDIA
+    VRAM:     4019 MB
+    Driver:   27.21.14.5296
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Mono path[0] = 'C:/Program Files/Unity 2021.2.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011932 seconds.
+Register platform support module: C:/Program Files/Unity 2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007855 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 176.95 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 218.07 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.113 seconds
+- Completed reload, in  1.068 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1113ms)
-		BeginReloadAssembly (139ms)
+	ReloadAssembly (1069ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (838ms)
-			LoadAssemblies (134ms)
+		EndReloadAssembly (853ms)
+			LoadAssemblies (101ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (167ms)
+			SetupTypeCache (156ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (547ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (564ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
+				InitializePlatformSupportModulesInManaged (25ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (177ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (254ms)
-				ProcessInitializeOnLoadMethodAttributes (91ms)
+				RefreshPlugins (218ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (240ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.024874 seconds.
+Registered in 0.019280 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 379.94 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 171.90 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x00032] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:48 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x00032] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:48 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -126,43 +126,43 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.972 seconds
+- Completed reload, in  3.532 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4974ms)
-		BeginReloadAssembly (362ms)
+	ReloadAssembly (3533ms)
+		BeginReloadAssembly (176ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (26ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (57ms)
-		EndReloadAssembly (4272ms)
-			LoadAssemblies (330ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (3207ms)
+			LoadAssemblies (159ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (632ms)
+			SetupTypeCache (406ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (170ms)
-			SetupLoadedEditorAssemblies (3148ms)
+			RebuildScriptCaches (97ms)
+			SetupLoadedEditorAssemblies (2482ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (26ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (380ms)
-				BeforeProcessingInitializeOnLoad (248ms)
-				ProcessInitializeOnLoadAttributes (2360ms)
-				ProcessInitializeOnLoadMethodAttributes (122ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				RefreshPlugins (172ms)
+				BeforeProcessingInitializeOnLoad (183ms)
+				ProcessInitializeOnLoadAttributes (1964ms)
+				ProcessInitializeOnLoadMethodAttributes (133ms)
+				AfterProcessingInitializeOnLoad (13ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 2.44 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 1.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5568 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 44 unused Assets / (0.7 MB). Loaded Objects now: 6021.
-Memory consumption went from 221.5 MB to 220.8 MB.
-Total: 22.309800 ms (FindLiveObjects: 0.563800 ms CreateObjectMapping: 0.538800 ms MarkObjects: 20.746500 ms  DeleteObjects: 0.458000 ms)
+Unloading 44 unused Assets / (0.7 MB). Loaded Objects now: 6019.
+Memory consumption went from 221.4 MB to 220.7 MB.
+Total: 21.979900 ms (FindLiveObjects: 0.617100 ms CreateObjectMapping: 0.619100 ms MarkObjects: 20.315100 ms  DeleteObjects: 0.426700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -176,43 +176,31 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 9731.083388 seconds.
-  path: Assets/Prefabs/Lit_Player.prefab
-  artifactKey: Guid(8637c7ceb2bb45f49866a3f12bdd8f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Lit_Player.prefab using Guid(8637c7ceb2bb45f49866a3f12bdd8f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9939f31979dfd40ee815d3d2daed6de9') in 0.439500 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Prefabs/Red.prefab
-  artifactKey: Guid(dfc0d12c1d8812242baa928362b942ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Red.prefab using Guid(dfc0d12c1d8812242baa928362b942ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba34797a9ccd6bb9a17c947e1fa5419e') in 0.182676 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/Prefabs/HeartbeatBorder.prefab
-  artifactKey: Guid(78e6b6e90eddc1a4e99458a90bfe2a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/HeartbeatBorder.prefab using Guid(78e6b6e90eddc1a4e99458a90bfe2a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a21c213332aa6479839977a137e9b8e') in 0.018684 seconds 
+  Time since last request: 3801.430280 seconds.
+  path: Assets/Scripts/TrapObject.cs
+  artifactKey: Guid(c020b200254969544a923c5d86b37cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TrapObject.cs using Guid(c020b200254969544a923c5d86b37cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd48f6d5106143c383ff787538288adad') in 0.080098 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.015189 seconds.
+Registered in 0.010930 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.98 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -220,113 +208,40 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.576 seconds
+- Completed reload, in  2.199 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4578ms)
-		BeginReloadAssembly (427ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (139ms)
-		EndReloadAssembly (3864ms)
-			LoadAssemblies (310ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (759ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (147ms)
-			SetupLoadedEditorAssemblies (1900ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (268ms)
-				ProcessInitializeOnLoadAttributes (1379ms)
-				ProcessInitializeOnLoadMethodAttributes (199ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (35ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.32 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5429 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (310.8 KB). Loaded Objects now: 6085.
-Memory consumption went from 220.8 MB to 220.5 MB.
-Total: 22.870100 ms (FindLiveObjects: 0.994000 ms CreateObjectMapping: 1.449700 ms MarkObjects: 20.184600 ms  DeleteObjects: 0.239900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012620 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.84 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  5.038 seconds
-Domain Reload Profiling:
-	ReloadAssembly (5039ms)
-		BeginReloadAssembly (226ms)
+	ReloadAssembly (2199ms)
+		BeginReloadAssembly (214ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (4643ms)
-			LoadAssemblies (231ms)
+		EndReloadAssembly (1856ms)
+			LoadAssemblies (152ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (892ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (168ms)
-			SetupLoadedEditorAssemblies (2410ms)
+			SetupTypeCache (370ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (914ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (31ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (338ms)
-				ProcessInitializeOnLoadAttributes (1837ms)
-				ProcessInitializeOnLoadMethodAttributes (177ms)
-				AfterProcessingInitializeOnLoad (23ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (670ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (31ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.07 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5419 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (309.9 KB). Loaded Objects now: 6088.
-Memory consumption went from 219.8 MB to 219.5 MB.
-Total: 12.274800 ms (FindLiveObjects: 0.539500 ms CreateObjectMapping: 0.471000 ms MarkObjects: 11.177200 ms  DeleteObjects: 0.085800 ms)
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 6022.
+Memory consumption went from 211.7 MB to 211.0 MB.
+Total: 14.664000 ms (FindLiveObjects: 0.623200 ms CreateObjectMapping: 0.607400 ms MarkObjects: 13.122300 ms  DeleteObjects: 0.309900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -341,24 +256,24 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011834 seconds.
+Registered in 0.011684 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\rnowak\Documents\GameDev\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
@@ -366,40 +281,40 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  3.273 seconds
+- Completed reload, in  2.217 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3275ms)
-		BeginReloadAssembly (358ms)
+	ReloadAssembly (2218ms)
+		BeginReloadAssembly (212ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (106ms)
-		EndReloadAssembly (2681ms)
-			LoadAssemblies (243ms)
+			CreateAndSetChildDomain (63ms)
+		EndReloadAssembly (1877ms)
+			LoadAssemblies (151ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (529ms)
+			SetupTypeCache (380ms)
 			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (1548ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (952ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (140ms)
-				ProcessInitializeOnLoadAttributes (1185ms)
-				ProcessInitializeOnLoadMethodAttributes (186ms)
-				AfterProcessingInitializeOnLoad (21ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (693ms)
+				ProcessInitializeOnLoadMethodAttributes (97ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (35ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.91 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.59 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5419 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (309.9 KB). Loaded Objects now: 6091.
-Memory consumption went from 219.8 MB to 219.5 MB.
-Total: 25.563900 ms (FindLiveObjects: 1.186300 ms CreateObjectMapping: 0.962400 ms MarkObjects: 23.296500 ms  DeleteObjects: 0.114300 ms)
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 6025.
+Memory consumption went from 211.7 MB to 211.1 MB.
+Total: 13.623300 ms (FindLiveObjects: 0.599800 ms CreateObjectMapping: 0.670200 ms MarkObjects: 12.075700 ms  DeleteObjects: 0.276300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -411,3 +326,228 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012008 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.60 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.926 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3928ms)
+		BeginReloadAssembly (353ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (98ms)
+		EndReloadAssembly (3304ms)
+			LoadAssemblies (246ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (663ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (125ms)
+			SetupLoadedEditorAssemblies (1657ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (223ms)
+				ProcessInitializeOnLoadAttributes (1194ms)
+				ProcessInitializeOnLoadMethodAttributes (192ms)
+				AfterProcessingInitializeOnLoad (22ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 6028.
+Memory consumption went from 211.8 MB to 211.1 MB.
+Total: 23.377500 ms (FindLiveObjects: 0.716500 ms CreateObjectMapping: 0.723000 ms MarkObjects: 21.424000 ms  DeleteObjects: 0.512100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.020172 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.955 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3956ms)
+		BeginReloadAssembly (362ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (95ms)
+		EndReloadAssembly (3369ms)
+			LoadAssemblies (264ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (620ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (132ms)
+			SetupLoadedEditorAssemblies (1779ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (234ms)
+				ProcessInitializeOnLoadAttributes (1331ms)
+				ProcessInitializeOnLoadMethodAttributes (168ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.80 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 6031.
+Memory consumption went from 211.8 MB to 211.1 MB.
+Total: 25.678500 ms (FindLiveObjects: 0.958200 ms CreateObjectMapping: 0.996400 ms MarkObjects: 23.038300 ms  DeleteObjects: 0.683200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018052 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\LFacione\Documents\GitHub\Project-Dragonfruit-2.0\Project Dragonfruit 2.0\Library\PackageCache\com.unity.visualscripting@1.7.7\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.872 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3873ms)
+		BeginReloadAssembly (337ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (15ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (92ms)
+		EndReloadAssembly (3296ms)
+			LoadAssemblies (246ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (689ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (125ms)
+			SetupLoadedEditorAssemblies (1650ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (221ms)
+				ProcessInitializeOnLoadAttributes (1196ms)
+				ProcessInitializeOnLoadMethodAttributes (185ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.74 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (0.7 MB). Loaded Objects now: 6034.
+Memory consumption went from 211.6 MB to 210.9 MB.
+Total: 25.621100 ms (FindLiveObjects: 0.671700 ms CreateObjectMapping: 0.762800 ms MarkObjects: 23.711200 ms  DeleteObjects: 0.473400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 507.100045 seconds.
+  path: Assets/Scripts/HiddenBehind.cs
+  artifactKey: Guid(e6d1a0857f2ac0a4a926356ff03f6102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HiddenBehind.cs using Guid(e6d1a0857f2ac0a4a926356ff03f6102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523b5dbaecf1f16f25dc2fb16b5dd49d') in 0.009052 seconds 
