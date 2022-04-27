@@ -60,7 +60,7 @@ public class PlayerEnemyTracking : MonoBehaviour
         
         else if (HUDScript.Instance.stressLVL >= 0f && HUDScript.Instance.stressLVL < 25f)
         {
-            if(spawn)
+            if (spawn)
             {
                 transform.position = new Vector3(transform.position.x - xoffsetspawn, transform.position.y, transform.position.z);
             }
