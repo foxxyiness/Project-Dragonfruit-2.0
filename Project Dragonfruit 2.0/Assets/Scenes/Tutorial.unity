@@ -9295,7 +9295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1421574936913209752, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 221.2
+      value: -94.9
       objectReference: {fileID: 0}
     - target: {fileID: 1421574936913209752, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36243,6 +36243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4604756532423551714, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7348471456335730496, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: m_Name
       value: EnemyObj
@@ -36331,6 +36335,10 @@ PrefabInstance:
       propertyPath: FinalPhase
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7348471456335730504, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+      propertyPath: finalPhase
+      value: 
+      objectReference: {fileID: 1521753109}
     - target: {fileID: 7348471456335730504, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
       propertyPath: ParticlePrefab
       value: 
@@ -44818,6 +44826,11 @@ SpriteRenderer:
 --- !u!1 &1521753103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7348471456335730496, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
+  m_PrefabInstance: {fileID: 1189216057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1521753109 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4604756532423551714, guid: 17d1f9a62bb6f9e43b7167c77fdc1638, type: 3}
   m_PrefabInstance: {fileID: 1189216057}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522258283
