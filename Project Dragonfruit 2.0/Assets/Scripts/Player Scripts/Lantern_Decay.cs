@@ -7,6 +7,8 @@ public class Lantern_Decay : MonoBehaviour
 {
     public PlayerStateMachine PSM;
     public Light2D lantern;
+    public AudioSource lanternDie;
+    public AudioSource lanternAlive;
     //public GameObject lanternText;
     private bool drainOverTime = true;
     private float drainRate, rechargeRate, maxBrightness, minBrightness;
@@ -22,6 +24,7 @@ public class Lantern_Decay : MonoBehaviour
     {
         LightBoy();
         NightBoy();
+
     }
 
     private void LightBoy()
@@ -33,15 +36,12 @@ public class Lantern_Decay : MonoBehaviour
             {
                 lantern.intensity -= Time.deltaTime * (drainRate / 1000);
             }
-           /* else if(lantern.intensity <= minBrightness)
+            else if(lantern.intensity <= minBrightness)
             {
                 lantern.intensity = minBrightness;
-                if (!Input.GetKeyDown(KeyCode.F))
-                {
-                    StartCoroutine(suggestedLight());
-                }
-                
-            }*/
+                if(lantern.intensity == minBrightness)
+                    lanternDie.Play();
+            }
         }
     }
     private void NightBoy()
@@ -54,7 +54,12 @@ public class Lantern_Decay : MonoBehaviour
                 lantern.intensity += Time.deltaTime * (rechargeRate / 1000);
             }
             else if (lantern.intensity > maxBrightness)
+            {
                 lantern.intensity = maxBrightness;
+                if (lantern.intensity >= minBrightness)
+                    lanternAlive.Play();
+            }
+                
         }
     }
 

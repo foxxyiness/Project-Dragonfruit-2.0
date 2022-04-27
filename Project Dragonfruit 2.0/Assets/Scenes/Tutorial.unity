@@ -8285,6 +8285,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red 3.0
       objectReference: {fileID: 0}
+    - target: {fileID: 7284358284401069502, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+      propertyPath: lanternDie
+      value: 
+      objectReference: {fileID: 1612627288}
+    - target: {fileID: 7284358284401069502, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+      propertyPath: lanternAlive
+      value: 
+      objectReference: {fileID: 1612627287}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
 --- !u!1 &436827435
@@ -45252,6 +45260,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4009b7b3900594d4f926823d060d20ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1612627287 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 977866634101733526, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+  m_PrefabInstance: {fileID: 429240473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1612627288 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9136619851761501786, guid: 4b2f49cc8c5dc71429a1d98b944b3eda, type: 3}
+  m_PrefabInstance: {fileID: 429240473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1618490252
 GameObject:
   m_ObjectHideFlags: 0
