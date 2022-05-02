@@ -57,8 +57,13 @@ public class PlayerEnemyTracking : MonoBehaviour
             }
             spawn = true;
         }
+        
         else if (HUDScript.Instance.stressLVL >= 0f && HUDScript.Instance.stressLVL < 25f)
         {
+            if (spawn)
+            {
+                transform.position = new Vector3(transform.position.x - xoffsetspawn, transform.position.y, transform.position.z);
+            }
             spawn = false;
         }
         CurrPos = target.transform.position;
